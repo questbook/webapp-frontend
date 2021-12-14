@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function Header() {
   return (
-    <header className="flex flex-col items-center p-2 h-[80px] sm:flex-row sm:justify-between">
+    <header className="flex flex-col items-center p-2 sm:h-[80px] sm:flex-row sm:justify-between">
       <div className="flex flex-row items-center ml-4 mb-2 sm:mb-0">
         <Image src={"/qb_menu_logo.svg"} width={30} height={20} />
         <h2 className="pl-1 font-Satoshi font-bold text-2xl">Questbook</h2>

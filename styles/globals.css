@@ -11,3 +11,24 @@
   font-display: swap;
   font-style: normal;
 }
+
+.hero-gradient {
+  background: linear-gradient(
+    to right bottom,
+    #6c43e1,
+    #684de9,
+    #6457f1,
+    #6060f8,
+    #5b69ff
+  );
+}
+
+.hero-text-gradient {
+  -webkit-background-clip: text;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 117, 183, 1) 0%,
+    rgba(255, 241, 112, 1) 36%,
+    rgba(0, 209, 255, 1) 99%
+  );
+}
