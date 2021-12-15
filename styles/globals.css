@@ -32,3 +32,11 @@
     rgba(0, 209, 255, 1) 99%
   );
 }
+
+.bg-community-gradient {
+  background: radial-gradient(
+    63.47% 63.47% at 49.31% 0%,
+    #817c7c 0%,
+    #333333 100%
+  );
+}
