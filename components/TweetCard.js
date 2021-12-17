@@ -2,7 +2,8 @@ import Image from "next/image";
 
 function TweetCard({ name, position, tweet, imgSrc }) {
   return (
-    <figure className="relative  w-auto  h-96 flex flex-col bg-[#252729] rounded-xl p-6">
+    // <figure className="relative w-[94vw]  lg:w-auto   h-96 flex flex-col bg-[#252729] rounded-xl p-6">
+    <figure className="relative shrink-0 max-w-[88vw] sm:max-w-[60vw] basis-full lg:basis-1/4 w-[80vw] lg:w-[94vw]  lg:w-auto   h-96 flex flex-col bg-[#252729] rounded-xl p-6">
       <figcaption className="flex items-center space-x-4">
         <img
           src={imgSrc}

@@ -1,12 +1,23 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 
 function MobileSection() {
+  const mobileSectionRef = useRef();
+  const mobileImgRef = useRef();
   const [scrollY, setScrollY] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(0);
+  const [windowHeight, setWindowHeight] = useState(0);
+  const [offsetBottom, setOffsetBottom] = useState(0);
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
+    setWindowWidth(window.innerWidth);
+    setWindowHeight(window.outerHeight);
+    console.log("windowWidth", windowWidth);
+    const { offsetTop, offsetHeight } = mobileSectionRef.current;
+    const { offsetHeight: imgOffsetHeight } = mobileImgRef.current;
+    setOffsetBottom(offsetTop + offsetHeight - imgOffsetHeight / 2);
 
     handleScroll();
 
@@ -17,7 +28,16 @@ function MobileSection() {
   }, []);
 
   return (
-    <section className="relative w-full h-[74vh] pt-20 text-center ">
+    // <section
+    //   className="relative w-full lg:h-[74vh] pt-20 pb-8 lg:pb-0 text-center "
+    //   ref={mobileSectionRef}
+    // >
+    <section
+      className={`${
+        windowHeight < 837 ? "h-auto" : "lg:h-[74vh]"
+      } relative w-full  pt-20 pb-8 lg:pb-0 text-center `}
+      ref={mobileSectionRef}
+    >
       <h2 className="font-Inter font-bold text-3xl sm:text-6xl text-[#404EED] mb-3 ">
         Designed for every device
       </h2>
@@ -25,17 +45,27 @@ function MobileSection() {
         Learn on Questbook anytime and anywhere with our apps on iOS and
         Android.
       </p>
-      <div className="absolute w-full z-10 ">
-        <div className=" -bottom-36 mx-auto w-[344.5px] h-[698px] relative">
+      <div
+        className={`${
+          windowHeight < 837 ? "static" : "lg:absolute"
+        }  w-full z-10 lg:-bottom-[50%]  `}
+        ref={mobileImgRef}
+      >
+        {/* <div className=" lg:-bottom-24 xl:-bottom-36 mx-auto w-[226px]  xl:w-[344.5px] h-[458.55px] xl:h-[698px] relative"> */}
+        <div className="  mx-auto w-[226px]  xl:w-[344.5px] h-[458.55px] xl:h-[698px] relative">
           <Image
-            src={`${scrollY >= 1597 ? "/i12pb_exp.png" : "/i12p_exp.png"}`}
+            src={`${
+              scrollY >= offsetBottom && windowWidth >= 1000
+                ? "/i12pb_exp.png"
+                : "/i12p_exp.png"
+            }`}
             layout="fill"
-            objectFit="cover"
+            objectFit="scale-down"
             className="transition-src duration-1000"
           />
         </div>
       </div>
-      <div className="absolute flex  bottom-4 right-[17%] ">
+      <div className="lg:absolute flex mx-auto w-fit   bottom-16 lg:right-[10%] xl:right-[17%] ">
         <button className="mr-6 flex flex-row justify-around w-[132px] h-[46px]  items-center py-2 px-2 text-white rounded bg-[#3F3E3E]">
           <Image src={"/apple_logo.svg"} width={20} height={20} />
           <Image src={"/app_store_text.svg"} width={"68px"} height={"24px"} />
