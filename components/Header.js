@@ -36,7 +36,7 @@ function Header() {
       <div
         className={`${
           windowWidth >= 1024 ? "justify-between" : "justify-start"
-        } flex flex-row items-center space-x-4`}
+        } flex flex-row items-center space-x-4 mr-4`}
       >
         <button className="flex flex-row w-28  items-center py-2 px-2 text-white rounded bg-gradient-to-r from-melrose-g to-medium-purple-g">
           <Image src={"/apple_logo.svg"} width={20} height={20} />
