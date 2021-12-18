@@ -64,7 +64,6 @@ function CommunitySection() {
       <p className="font-Inter font-normal text-xl  text-white ">
         Don't believe us? Seee what they are saying about Questbook.
       </p>
-      {/* <div className=" w-full lg:min-w-[104%] flex overflow-x-scroll lg:grid  lg:grid-cols-1 lg:gap-6 lg:gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:absolute lg:bottom-0 lg:-left-[2%]"> */}
       <div className=" w-[inherit]  lg:w-full  flex flex-row gap-4 overflow-x-scroll lg:overflow-x-hidden bottom-0 absolute ">
         {tweets.map((tweet) => (
           <TweetCard key={tweet.id} {...tweet} />

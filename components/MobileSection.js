@@ -28,10 +28,6 @@ function MobileSection() {
   }, []);
 
   return (
-    // <section
-    //   className="relative w-full lg:h-[74vh] pt-20 pb-8 lg:pb-0 text-center "
-    //   ref={mobileSectionRef}
-    // >
     <section
       className={`${
         windowHeight < 837 ? "h-auto" : "lg:h-[74vh]"
@@ -51,7 +47,6 @@ function MobileSection() {
         }  w-full z-10 lg:-bottom-[50%]  `}
         ref={mobileImgRef}
       >
-        {/* <div className=" lg:-bottom-24 xl:-bottom-36 mx-auto w-[226px]  xl:w-[344.5px] h-[458.55px] xl:h-[698px] relative"> */}
         <div className="  mx-auto w-[226px]  xl:w-[344.5px] h-[458.55px] xl:h-[698px] relative">
           <Image
             src={`${

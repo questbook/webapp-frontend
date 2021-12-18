@@ -15,7 +15,6 @@ function Hero() {
           windowHeight < 837 ? "h-auto" : "lg:h-[60vh]"
         }  hero-gradient relative`}
       >
-        {/* <div className=" lg:h-[70vh] hero-gradient"> */}
         <div className="text-center pt-20 sm:pt-24 w-4/6 mx-auto">
           <h2 className="font-Inter font-bold text-3xl sm:text-6xl text-white mb-3">
             Learn to

@@ -13,12 +13,6 @@ function CourseCards() {
         windowHeight < 837 ? "static" : "lg:absolute"
       } lg:w-full -bottom-[40%]   pb-8 px-6 lg:px-16  mx-2 xl:mx-auto `}
     >
-      {/* // <div
-    //   className={`${
-    //     windowHeight < 837 ? "static" : "lg:absolute"
-    //   } lg:w-full   lg:top-[26rem] xl:top-[22rem] pb-8 px-6 lg:px-16  mx-2 xl:mx-auto `}
-    // > */}
-      {/* <div className="lg:w-full lg:absolute lg:bottom-0 pb-8 px-6 lg:px-16  mx-2 xl:mx-auto "> */}
       <div className="py-3 lg:pl-8 xl:pl-0 text-left">
         <h3 className=" text-white font-Inter text-2xl">All Courses</h3>
       </div>
