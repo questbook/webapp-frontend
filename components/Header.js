@@ -55,7 +55,9 @@ function Header() {
     </>
   );
   return (
-    <header className={` flex flex-row items-center z-10 p-2  justify-between`}>
+    <header
+      className={`sticky top-0 bg-white flex flex-row items-center z-10 p-2  justify-between`}
+    >
       <div className="flex flex-row z-30 items-center ml-4 w-1/2 lg:w-1/3">
         <Image src={"/qb_menu_logo.svg"} width={30} height={20} />
         <h2 className="pl-1 font-Satoshi font-bold text-2xl">Questbook</h2>

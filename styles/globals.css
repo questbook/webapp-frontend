@@ -40,3 +40,11 @@
     #333333 100%
   );
 }
+
+.bg-track-hero-gradient {
+  background: radial-gradient(
+    38.4% 135.95% at 77.99% 97.71%,
+    #7f9de0 0%,
+    #4c6fbb 100%
+  );
+}
