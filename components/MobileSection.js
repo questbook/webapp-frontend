@@ -13,7 +13,7 @@ function MobileSection() {
     };
     setWindowWidth(window.innerWidth);
     const { offsetTop, offsetHeight } = mobileSectionRef.current;
-    setOffsetBottom(offsetTop + offsetHeight);
+    setOffsetBottom(offsetTop + offsetHeight - 48);
 
     handleScroll();
 
@@ -58,8 +58,12 @@ function MobileSection() {
           target="_blank"
           className="mr-6 flex flex-row justify-around w-[132px] h-[46px]  items-center py-2 px-2 text-white rounded bg-[#3F3E3E]"
         >
-          <Image src={"/apple_logo.svg"} width={20} height={20} />
-          <Image src={"/app_store_text.svg"} width={"68px"} height={"24px"} />
+          <Image src={"/images/apple_logo.svg"} width={20} height={20} />
+          <Image
+            src={"/images/app_store_text.svg"}
+            width={"68px"}
+            height={"24px"}
+          />
         </a>
         <a
           href="https://play.google.com/store/apps/details?id=app.questbook&hl=en_IN&gl=US"

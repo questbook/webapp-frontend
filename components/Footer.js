@@ -78,9 +78,9 @@ function Footer() {
               target="_blank"
               className="mr-6 flex flex-row justify-around w-[132px] h-[46px]  items-center py-2 px-2 text-white rounded bg-black"
             >
-              <Image src={"/apple_logo.svg"} width={20} height={20} />
+              <Image src={"/images/apple_logo.svg"} width={20} height={20} />
               <Image
-                src={"/app_store_text.svg"}
+                src={"/images/app_store_text.svg"}
                 width={"68px"}
                 height={"24px"}
               />
@@ -92,12 +92,12 @@ function Footer() {
             >
               <Image
                 className="w-12"
-                src={"/play_store_logo.svg"}
+                src={"/images/play_store_logo.svg"}
                 width={20}
                 height={20}
               />
               <Image
-                src={"/play_store_text.svg"}
+                src={"/images/play_store_text.svg"}
                 width={"68px"}
                 height={"24px"}
               />
