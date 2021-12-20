@@ -52,7 +52,7 @@ function MobileSection() {
           />
         </div>
       </div>
-      <div className="lg:absolute flex mx-auto w-fit lg:bottom-4 lg:right-[10%] xl:right-[17%] ">
+      <div className="lg:absolute z-10 flex mx-auto w-fit lg:bottom-4 lg:right-[10%] xl:right-[17%] ">
         <a
           href="https://apps.apple.com/in/app/questbook-learn-together/id1565531521"
           target="_blank"
