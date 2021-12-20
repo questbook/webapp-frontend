@@ -16,19 +16,12 @@ function TrackHero() {
 
   useEffect(() => {
     const { offsetTop, offsetHeight } = sectionRef.current;
-    console.log(
-      "offsetTop",
-      offsetTop,
-      offsetHeight,
-      sectionRef.current.height
-    );
     setSectionTop(offsetTop);
   }, []);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
-      console.log("scrollY", scrollY);
     };
 
     handleScroll();

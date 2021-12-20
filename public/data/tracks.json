@@ -32,5 +32,44 @@
         "desc": "In this quest, we will create and launch our coin a.k.a. as cryptocurrency."
       }
     ]
+  },
+  "build-on-solana": {
+    "trackName": "Build on Solana",
+    "desc": "Solana is the arguably the second most popular blockchain. The programs in Solana are written in Rust.",
+    "quests": [
+      {
+        "slug": "create-an-airdrop-program-with-solana-web3.js",
+        "questName": "Create an airdrop program with Solana web3.js",
+        "github_url": "https://raw.githubusercontent.com/altsam/create_an_airdrop_program/main",
+        "level": "Beginner",
+        "desc": "In this quest, you’ll learn how to develop an application leveraging the Solana blockchain - which is the fastest growing blockchain community in the world. We’ll be developing an airdrop program throughout this quest."
+      }
+    ]
+  },
+  "build-on-near": {
+    "trackName": "Build on NEAR",
+    "desc": "",
+    "quests": [
+      {
+        "slug": "creating-nfts-using-near-on-rust",
+        "questName": "Creating NFTs using NEAR on Rust",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/Creating-NFTs-using-NEAR-on-Rust/main",
+        "level": "Beginner",
+        "desc": "In this quest, we’ll start building an NFT on NEAR using rust."
+      }
+    ]
+  },
+  "fundamentals-of-blockchain": {
+    "trackName": "Fundamentals of Blockchain",
+    "desc": "",
+    "quests": [
+      {
+        "slug": "creating-a-simple-blockchain-in-python",
+        "questName": "Creating a simple blockchain in Python",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/Creating-a-simple-blockchain-in-Python/main",
+        "level": "Beginner",
+        "desc": "In this chain agnostic quest, we create a simple blockchain in Python."
+      }
+    ]
   }
 }

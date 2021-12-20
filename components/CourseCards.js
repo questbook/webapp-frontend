@@ -21,21 +21,21 @@ function CourseCards() {
           subtext={"Solana"}
           imgSrc={"/images/solana.png"}
           dimensions={[84, 85]}
-          url={"/track/build-on-ethereum"}
+          url={"/track/build-on-solana"}
         />
         <CourseCard
           text={"Build on"}
           subtext={"NEAR"}
           imgSrc={"/images/near.png"}
           dimensions={[98, 82]}
-          url={"/track/build-on-ethereum"}
+          url={"/track/build-on-near"}
         />
         <CourseCard
           text={"Fundamentals of"}
           subtext={"Blockchain"}
           imgSrc={"/images/bc.png"}
           dimensions={[99, 90]}
-          url={"/track/build-on-ethereum"}
+          url={"/track/fundamentals-of-blockchain"}
         />
       </div>
     </div>

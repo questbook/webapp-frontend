@@ -27,7 +27,6 @@ export default function Track({ track, trackNameKey }) {
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
-      console.log("scrollY", scrollY);
     };
 
     handleScroll();

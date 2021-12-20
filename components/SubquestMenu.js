@@ -39,9 +39,7 @@ function SubquestMenu() {
               <li
                 onClick={() => {
                   setCurrentSubQuest(index);
-                  windowWidth < 1024
-                    ? setShowMenu(false)
-                    : console.log(windowWidth, "failed");
+                  windowWidth < 1024 ? setShowMenu(false) : null;
                 }}
                 className="flex flex-row cursor-pointer items-center space-x-2"
                 key={index}

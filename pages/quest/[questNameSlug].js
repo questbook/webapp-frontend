@@ -35,6 +35,7 @@ export default function Quest({
     setcurrentTrackNameKey,
     setcurrentTrackName,
     setcurrentQuestLevel,
+    setCurrentSubQuest,
   } = useAppContext();
 
   const { showMenu, setShowMenu } = useAppContext();
@@ -45,6 +46,7 @@ export default function Quest({
     setcurrentTrackNameKey(trackNameKey);
     setcurrentTrackName(trackName);
     setcurrentQuestLevel(level);
+    setCurrentSubQuest(0);
   }, [github_url, questName, trackNameKey, trackName, level]);
 
   useEffect(() => {
@@ -80,6 +82,7 @@ export default function Quest({
           }${line}`;
         }
       });
+      // subquestTitlesMd.shift("## Introduction");
       setquestTitle(questTitleMd[0]);
       setquestDetails(questDetailsMd.join("\n"));
       setsubquestTitles(subquestTitlesMd);
@@ -118,14 +121,12 @@ export default function Quest({
 }
 
 export async function getStaticPaths() {
-  // console.log(tracks);
-  console.log(Object.keys(tracks));
-  const paths = Object.values(tracks).map((track) =>
+  let paths = Object.values(tracks).map((track) =>
     track?.quests.map((quest) => ({
       params: { questNameSlug: quest?.slug },
     }))
-  )[0];
-  console.log(paths);
+  );
+  paths = [].concat.apply([], paths);
   return {
     paths,
     fallback: false,
@@ -136,10 +137,11 @@ export async function getStaticProps(context) {
   const { questNameSlug } = context.params;
   let res, quest, trackNameKey;
 
-  Object.entries(tracks).forEach(([key, track]) => {
+  Object.entries(tracks).some(([key, track]) => {
     quest = track?.quests.find((quest) => quest?.slug === questNameSlug);
     if (quest !== undefined) {
       trackNameKey = key;
+      return true;
     }
   });
   const { questName, github_url, level } = quest;
@@ -155,7 +157,6 @@ export async function getStaticProps(context) {
   }
   try {
     res = await axios.get(`${baseRepoUrl}/LEARN.md`);
-    console.log(res);
   } catch (error) {
     return {
       redirect: {

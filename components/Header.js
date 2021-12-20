@@ -71,10 +71,14 @@ function Header() {
     <>
       <header className={`sticky top-0 bg-white z-20`}>
         <div className="container mx-auto flex flex-row items-center z-10 p-2  justify-between">
-          <div className="flex flex-row z-30 items-center ml-4 w-1/2 lg:w-1/3">
-            <Image src={"/images/qb_menu_logo.svg"} width={30} height={20} />
-            <h2 className="pl-1 font-Satoshi font-bold text-2xl">Questbook</h2>
-          </div>
+          <Link href="/">
+            <div className="flex flex-row cursor-pointer z-30 items-center ml-4 w-1/2 lg:w-1/3">
+              <Image src={"/images/qb_menu_logo.svg"} width={30} height={20} />
+              <h2 className="pl-1 font-Satoshi font-bold text-2xl">
+                Questbook
+              </h2>
+            </div>
+          </Link>
           <div
             className="inline-flex z-30 lg:hidden p-[5px] mr-4 "
             onClick={() => setMenuState(!menuState)}
