@@ -51,8 +51,8 @@ function MobileSection() {
           <Image
             src={`${
               scrollY >= offsetBottom && windowWidth >= 1000
-                ? "/i12pb_exp.png"
-                : "/i12p_exp.png"
+                ? "/images/i12pb_exp.png"
+                : "/images/i12p_exp.png"
             }`}
             layout="fill"
             objectFit="scale-down"
@@ -61,19 +61,35 @@ function MobileSection() {
         </div>
       </div>
       <div className="lg:absolute flex mx-auto w-fit   bottom-16 lg:right-[10%] xl:right-[17%] ">
-        <button className="mr-6 flex flex-row justify-around w-[132px] h-[46px]  items-center py-2 px-2 text-white rounded bg-[#3F3E3E]">
-          <Image src={"/apple_logo.svg"} width={20} height={20} />
-          <Image src={"/app_store_text.svg"} width={"68px"} height={"24px"} />
-        </button>
-        <button className="flex flex-row justify-around w-[132px] h-[46px]  items-center py-2 px-2 text-white rounded bg-[#3F3E3E]">
+        <a
+          href="https://apps.apple.com/in/app/questbook-learn-together/id1565531521"
+          target="_blank"
+          className="mr-6 flex flex-row justify-around w-[132px] h-[46px]  items-center py-2 px-2 text-white rounded bg-[#3F3E3E]"
+        >
+          <Image src={"/images/apple_logo.svg"} width={20} height={20} />
+          <Image
+            src={"/images/app_store_text.svg"}
+            width={"68px"}
+            height={"24px"}
+          />
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=app.questbook&hl=en_IN&gl=US"
+          target="_blank"
+          className="flex flex-row justify-around w-[132px] h-[46px]  items-center py-2 px-2 text-white rounded bg-[#3F3E3E]"
+        >
           <Image
             className="w-12"
-            src={"/play_store_logo.svg"}
+            src={"/images/play_store_logo.svg"}
             width={20}
             height={20}
           />
-          <Image src={"/play_store_text.svg"} width={"68px"} height={"24px"} />
-        </button>
+          <Image
+            src={"/images/play_store_text.svg"}
+            width={"68px"}
+            height={"24px"}
+          />
+        </a>
       </div>
     </section>
   );

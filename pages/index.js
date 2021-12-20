@@ -12,7 +12,7 @@ export default function Home() {
       <div className="min-h-screen">
         <Head>
           <title>Questbook</title>
-          <link rel="icon" href="/qb_menu_logo.svg" />
+          <link rel="icon" href="/images/qb_menu_logo.svg" />
         </Head>
         <Header />
         <Hero />

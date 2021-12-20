@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "./github-markdown.css";
+
 @font-face {
   font-family: "Satoshi";
   src: url("/fonts/satoshi/Satoshi-Regular.woff2") format("woff2"),

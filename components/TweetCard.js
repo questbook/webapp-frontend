@@ -18,7 +18,7 @@ function TweetCard({ name, position, tweet, imgSrc }) {
             {position}
           </div>
         </div>
-        <img src={"/twitter.svg"} className="w-6 h-5" />
+        <img src={"/images/twitter.svg"} className="w-6 h-5" />
       </figcaption>
       <blockquote className="mt-6 pl-6 text-white text-left font-semibold text-base">
         <p>{tweet}</p>

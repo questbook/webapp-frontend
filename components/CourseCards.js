@@ -20,26 +20,30 @@ function CourseCards() {
         <CourseCard
           text={"Build on"}
           subtext={"Ethereum"}
-          imgSrc={"/eth.png"}
+          imgSrc={"/images/eth.png"}
           dimensions={[51, 85]}
+          url={"/track/build-on-ethereum"}
         />
         <CourseCard
           text={"Build on"}
           subtext={"Solana"}
-          imgSrc={"/solana.png"}
+          imgSrc={"/images/solana.png"}
           dimensions={[84, 85]}
+          url={"/track/build-on-ethereum"}
         />
         <CourseCard
           text={"Build on"}
           subtext={"NEAR"}
-          imgSrc={"/near.png"}
+          imgSrc={"/images/near.png"}
           dimensions={[98, 82]}
+          url={"/track/build-on-ethereum"}
         />
         <CourseCard
           text={"Fundamentals of"}
           subtext={"Blockchain"}
-          imgSrc={"/bc.png"}
+          imgSrc={"/images/bc.png"}
           dimensions={[99, 90]}
+          url={"/track/build-on-ethereum"}
         />
       </div>
     </div>

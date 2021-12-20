@@ -1,0 +1,36 @@
+{
+  "build-on-ethereum": {
+    "trackName": "Build on Ethereum",
+    "desc": "Most of the smart contract for Ethereum are written in Solidity. To do this track, it's helpful to have atleast some basic knowledge of programming fundamentals and any other language like Python or Javascript.",
+    "quests": [
+      {
+        "slug": "building-a-bank-with-solidity-that-isnt-a-toy",
+        "questName": "Building a bank with Solidity that isn't a toy",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/Building-a-bank-with-Solidity-that-isnt-a-toy-For-beginners/main",
+        "level": "Beginner",
+        "desc": "This is a perfect quest for a beginner. You will learn how to build a smart contract that can be deployed on Ethereum blockchain, how to store and retrieve data all by building a bank."
+      },
+      {
+        "slug": "getting-a-real-interest-using-compound",
+        "questName": "Getting a real interest using Compound",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/Getting-a-real-interest-rate/main",
+        "level": "Beginner",
+        "desc": "In this quest, we will build on previous quest and integrate Compound to get a real interest rate."
+      },
+      {
+        "slug": "bank-for-all-cryptocurrencies",
+        "questName": "Bank for all cryptocurrencies",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/A-bank-for-all-crypto-currencies/main",
+        "level": "Beginner",
+        "desc": "In this quest, we will modify previous quest to support all crypto currencies."
+      },
+      {
+        "slug": "launching-your-own-coin",
+        "questName": "Launching your own coin",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/Launching-our-own-coin/main",
+        "level": "Beginner",
+        "desc": "In this quest, we will create and launch our coin a.k.a. as cryptocurrency."
+      }
+    ]
+  }
+}

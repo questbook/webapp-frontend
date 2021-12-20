@@ -18,6 +18,8 @@ module.exports = {
     fontFamily: {
       Satoshi: ["Satoshi"],
       Inter: ["Inter"],
+      Roboto: ["Roboto"],
+      mono: ["mono"],
     },
   },
   plugins: [],
