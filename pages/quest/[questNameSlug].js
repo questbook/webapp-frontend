@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Footer from "../../components/Footer";
@@ -10,7 +10,6 @@ import SubquestNav from "../../components/SubquestNav";
 import { ArrowRightIcon } from "@heroicons/react/solid";
 import { useAppContext } from "../../context/state";
 import axios from "axios";
-import { useEffect } from "react/cjs/react.development";
 import tracks from "../../public/data/tracks.json";
 export default function Quest({
   data,
