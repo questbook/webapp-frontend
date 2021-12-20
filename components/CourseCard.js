@@ -5,12 +5,14 @@ function CourseCard({ text, subtext, imgSrc, dimensions, url }) {
   return (
     <div className="flex flex-col items-center justify-center w-40  xl:w-72 h-72  xl:h-96 rounded-xl bg-gradient-to-t from-[#FEFEFE] to-[#F1F2FF]  shadow-[0_13px_22px_rgba(73,83,179,0.19)]">
       <div className="basis-2/4 flex flex-col justify-end pb-8 ">
-        <Image
-          src={imgSrc}
-          width={dimensions[0]}
-          height={dimensions[1]}
-          className="drop-shadow-xl"
-        />
+        <div className="relative w-[55px] h-[63px] xl:w-[75px] xl:[93px] ">
+          <Image
+            src={imgSrc}
+            layout="fill"
+            objectFit="contain"
+            className="drop-shadow-xl"
+          />
+        </div>
       </div>
       <div className="basis-1/4 flex flex-col items-center justify-center">
         <p className="text-center text-black text-base font-Inter font-normal">
