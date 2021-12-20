@@ -3,7 +3,7 @@ import CourseCard from "./CourseCard";
 function CourseCards() {
   return (
     <div
-      className={` container lg:w-full lg:absolute -bottom-[40%] lg:-bottom-[30%] xl:-bottom-[40%]   pb-8 px-6 lg:px-16 xl:px-0 xl:-left-1/2 xl:-right-1/2  xl:mx-auto `}
+      className={` container lg:w-full left-0 right-0 mx-auto lg:absolute -bottom-[40%] lg:-bottom-[30%] xl:-bottom-[40%]   pb-8 px-6 lg:px-16 xl:px-0 xl:-left-1/2 xl:-right-1/2  xl:mx-auto `}
     >
       <div className="py-3  text-left">
         <h3 className=" text-white font-Inter text-2xl">All Courses</h3>

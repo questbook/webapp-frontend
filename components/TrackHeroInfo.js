@@ -2,7 +2,7 @@ import TrackHeroInfoCard from "./TrackHeroInfoCard";
 function TrackHeroInfo({ cname }) {
   return (
     <div
-      className={`${cname} container absolute flex flex-row justify-center w-11/12  -bottom-[15%]  h-28 rounded-md bg-gradient-to-b from-[#F4FAFF] to-[#EEF4F9] `}
+      className={`${cname} container absolute left-0 right-0 ml-auto mr-auto flex flex-row justify-center w-11/12  -bottom-[15%]  h-28 rounded-md bg-gradient-to-b from-[#F4FAFF] to-[#EEF4F9] `}
     >
       <TrackHeroInfoCard
         text="Always free"
