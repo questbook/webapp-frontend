@@ -57,7 +57,7 @@ function QuestHero() {
         } top-12  lg:overflow-y-hidden  py-4 lg:py-8  h-28  w-full overflow-x-clip bg-track-hero-gradient px-4 xl:px-28 transition-[padding]  duration-300 ease-linear  linear  mb-12 z-[9] `}
       >
         <div
-          className={` container mx-auto h-full relative  flex flex-row space-x-4 transition-[flex-direction] duration-300 `}
+          className={` container mx-auto h-full relative  flex flex-row space-x-2 transition-[flex-direction] duration-300 `}
         >
           <Link href={`/track/${currentTrackNameKey}`}>
             <ArrowCircleLeftIcon className="lg:hidden w-7 h-7 text-white" />
@@ -69,8 +69,8 @@ function QuestHero() {
           >
             <div
               className={`${
-                scrollY >= sectionTop ? "" : ""
-              } hidden lg:flex lg:flex-row lg:items-center lg:space-x-1 mb-8`}
+                scrollY >= sectionTop ? " mb-4 " : "mb-8"
+              } hidden lg:flex lg:flex-row lg:items-center lg:space-x-1 `}
             >
               <Link href="/">
                 <a className="font-Inter text-base font-normal text-white opacity-60">
@@ -97,8 +97,10 @@ function QuestHero() {
             </h4>
             <h1
               className={`${
-                scrollY >= sectionTop ? "" : " lg:text-5xl"
-              } font-Inter text-lg font-bold  text-white w-64 sm:w-[30rem] lg:w-[44rem] xl:w-[54rem] 2xl:w-[62rem] `}
+                scrollY >= sectionTop
+                  ? "lg:text-xl lg:w-[53rem] line-clamp-3 lg:line-clamp-1 "
+                  : "lg:text-3xl lg:w-[44rem] line-clamp-2 lg:line-clamp-3 "
+              } font-Inter text-sm sm:text-lg  font-bold  text-white w-56  sm:w-[30rem]   2xl:w-[62rem] `}
             >
               <ReactMarkdown remarkPlugins={[remarkGfm]}>
                 {questTitle}
@@ -107,10 +109,8 @@ function QuestHero() {
           </div>
           <div
             className={`${
-              scrollY >= sectionTop
-                ? " lg:right-20"
-                : " lg:right-20  lg:top-auto  lg:-bottom-24"
-            } absolute right-4  rotate-12 `}
+              scrollY >= sectionTop ? "" : "   lg:top-auto  lg:-bottom-24"
+            } absolute -right-8 lg:right-0 sm:right-0  rotate-12 `}
           >
             <div
               className={`${

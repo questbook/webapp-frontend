@@ -9,7 +9,8 @@ import TrackHeroInfo from "./TrackHeroInfo";
 import { useAppContext } from "../context/state";
 
 function TrackHero() {
-  const { currentTrackName, currentTrackDesc } = useAppContext();
+  const { currentTrackName, currentTrackNameKey, currentTrackDesc } =
+    useAppContext();
   const sectionRef = useRef();
   const [sectionTop, setSectionTop] = useState(0);
   const [scrollY, setScrollY] = useState(0);
@@ -85,15 +86,17 @@ function TrackHero() {
           </h4>
           <h2
             className={`${
-              scrollY >= sectionTop ? " text-lg " : "text-3xl lg:text-5xl"
+              scrollY >= sectionTop
+                ? " text-lg line-clamp-1 "
+                : "text-3xl lg:text-5xl"
             } font-Inter font-bold  text-white w-80 sm:w-[30rem] `}
           >
             {currentTrackName}
           </h2>
           <p
             className={`${
-              scrollY >= sectionTop ? "hidden" : ""
-            } font-Inter h-[168px] overflow-scroll text-xl text-white text-opacity-75 lg:w-[41rem] `}
+              scrollY >= sectionTop ? "hidden" : "line-clamp-6 lg:line-clamp-4"
+            } font-Inter    text-xl text-white text-opacity-75 lg:w-[41rem] `}
           >
             {currentTrackDesc}
           </p>
@@ -101,18 +104,18 @@ function TrackHero() {
             className={`${
               scrollY >= sectionTop
                 ? " right-0 lg:right-20 -bottom-6"
-                : "-right-7 lg:right-20 -top-7 lg:top-auto   lg:-bottom-8"
+                : "-right-7 lg:right-20 -top-7 lg:top-0   lg:-bottom-8"
             } absolute   rotate-12 `}
           >
             <div
               className={`${
                 scrollY >= sectionTop
                   ? " w-12 h-[50px] lg:w-[84px] lg:h-[86px] "
-                  : "w-32 lg:w-56 h-36 lg:h-60"
+                  : " w-24 lg:w-56  h-24 lg:h-60"
               } relative  transition-[width] transition-[height] duration-300 `}
             >
               <Image
-                src="/images/ethereum_p.png"
+                src={`/images/${currentTrackNameKey}.png`}
                 layout="fill"
                 className=" shadow-[4px_38px_43px_rgba(0,0,0,0.2)]"
               />

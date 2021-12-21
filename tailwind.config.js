@@ -22,5 +22,5 @@ module.exports = {
       mono: ["mono"],
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/line-clamp")],
 };
