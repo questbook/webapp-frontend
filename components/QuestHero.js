@@ -120,7 +120,7 @@ function QuestHero() {
               } relative w-12 h-[50px] transition-[width] transition-[height] duration-300 `}
             >
               <Image
-                src="/images/ethereum_p.png"
+                src={`/images/${currentTrackNameKey}.png`}
                 layout="fill"
                 className=" shadow-[4px_38px_43px_rgba(0,0,0,0.2)]"
               />
