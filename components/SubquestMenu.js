@@ -3,6 +3,7 @@ import { ChevronRightIcon, XIcon, ArrowLeftIcon } from "@heroicons/react/solid";
 import { useAppContext } from "../context/state";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 function SubquestMenu() {
   const { subquestTitles, currentSubQuest, setCurrentSubQuest } =
     useAppContext();
@@ -49,17 +50,17 @@ function SubquestMenu() {
                     index !== currentSubQuest ? "hidden" : ""
                   } w-6 h-12 text-[#06E487]`}
                 />
-                <p
+                <ReactMarkdown
                   className={`${
                     index !== currentSubQuest
                       ? "font-normal opacity-75"
                       : "font-semibold opacity-100"
                   } font-Inter text-base text-black`}
+                  remarkPlugins={[remarkGfm]}
+                  rehypePlugins={[rehypeRaw]}
                 >
-                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                    {subquestTitle}
-                  </ReactMarkdown>
-                </p>
+                  {subquestTitle}
+                </ReactMarkdown>
               </li>
             ))}
           </ul>

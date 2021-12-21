@@ -3,6 +3,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/outline";
 import { useAppContext } from "../context/state";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 
 function SubquestNav() {
   const { currentSubQuest, setCurrentSubQuest, subquestTitles } =
@@ -20,11 +21,13 @@ function SubquestNav() {
           <p className="font-Inter font-normal text-sm lg:text-base text-black lg:opacity-60">
             Prev
           </p>
-          <p className="font-Inter font-semibold text-base text-black opacity-80 lg:opacity-100">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>
-              {subquestTitles[currentSubQuest - 1]}
-            </ReactMarkdown>
-          </p>
+          <ReactMarkdown
+            className="font-Inter font-semibold text-base text-black opacity-80 lg:opacity-100"
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw]}
+          >
+            {subquestTitles[currentSubQuest - 1]}
+          </ReactMarkdown>
         </div>
       </div>
       <div
@@ -40,11 +43,13 @@ function SubquestNav() {
           <p className="font-Inter font-normal text-sm lg:text-base text-black lg:opacity-60">
             Next
           </p>
-          <p className="font-Inter font-semibold text-base text-black opacity-80 lg:opacity-100">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>
-              {subquestTitles[currentSubQuest + 1]}
-            </ReactMarkdown>
-          </p>
+          <ReactMarkdown
+            className="font-Inter font-semibold text-base text-black opacity-80 lg:opacity-100"
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw]}
+          >
+            {subquestTitles[currentSubQuest + 1]}
+          </ReactMarkdown>
         </div>
         <ChevronRightIcon className=" w-6 lg:w-16 h-12 lg:h-12 opacity-70" />
       </div>
