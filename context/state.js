@@ -19,6 +19,8 @@ export function AppWrapper({ children }) {
   const [githubRawUrl, setgithubRawUrl] = useState("");
 
   const [currentSubQuest, setCurrentSubQuest] = useState(0);
+
+  const [trackList, setTrackList] = useState([]);
   useEffect(() => {
     if (window.outerWidth >= 1024) setShowMenu(true);
   }, []);
@@ -54,6 +56,8 @@ export function AppWrapper({ children }) {
         setgithubRawUrl,
         currentQuestLevel,
         setcurrentQuestLevel,
+        trackList,
+        setTrackList,
       }}
     >
       {children}

@@ -60,7 +60,7 @@ function QuestHero() {
         <div
           className={` container mx-auto h-full relative  flex flex-row space-x-2 transition-[flex-direction] duration-300 `}
         >
-          <Link href={`/track/${currentTrackNameKey}`}>
+          <Link href={`/tracks/${currentTrackNameKey}`}>
             <ArrowCircleLeftIcon className="lg:hidden w-7 h-7 text-white" />
           </Link>
           <div
@@ -73,13 +73,13 @@ function QuestHero() {
                 scrollY >= sectionTop ? " mb-4 " : "mb-8"
               } hidden lg:flex lg:flex-row lg:items-center lg:space-x-1 `}
             >
-              <Link href="/">
+              <Link href="/tracks">
                 <a className="font-Inter text-base font-normal text-white opacity-60">
-                  All courses
+                  All tracks
                 </a>
               </Link>
               <ChevronRightIcon className="text-white opacity-75  w-4 h-[18px]" />
-              <Link href={`/track/${currentTrackNameKey}`}>
+              <Link href={`/tracks/${currentTrackNameKey}`}>
                 <a className="font-Inter text-base font-normal text-white opacity-60">
                   {currentTrackName}
                 </a>

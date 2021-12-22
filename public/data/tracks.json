@@ -1,6 +1,7 @@
 {
   "build-on-ethereum": {
     "trackName": "Build on Ethereum",
+    "cardThumbnail": "eth.png",
     "desc": "Most of the smart contract for Ethereum are written in Solidity. To do this track, it's helpful to have atleast some basic knowledge of programming fundamentals and any other language like Python or Javascript.",
     "quests": [
       {
@@ -35,6 +36,7 @@
   },
   "build-on-solana": {
     "trackName": "Build on Solana",
+    "cardThumbnail": "solana.png",
     "desc": "Solana is the arguably the second most popular blockchain. The programs in Solana are written in Rust.",
     "quests": [
       {
@@ -48,6 +50,7 @@
   },
   "build-on-near": {
     "trackName": "Build on NEAR",
+    "cardThumbnail": "near.png",
     "desc": "",
     "quests": [
       {
@@ -61,6 +64,7 @@
   },
   "fundamentals-of-blockchain": {
     "trackName": "Fundamentals of Blockchain",
+    "cardThumbnail": "bc.png",
     "desc": "",
     "quests": [
       {
