@@ -98,7 +98,7 @@ export default function Quest({
       <QuestHero />
       <main className="container mx-auto flex flex-row h-auto  lg:mt-16 mb-8">
         <SubquestMenu />
-        <div className="flex flex-col xl:basis-3/4 w-full overflow-auto">
+        <div className="flex flex-col mx-auto xl:basis-3/4 w-full overflow-auto">
           <button
             onClick={() => setShowMenu(true)}
             className={`${
