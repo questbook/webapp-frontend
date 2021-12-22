@@ -68,7 +68,6 @@ export default function Quest({
       fullquestMd.split("\n").map((line, index) => {
         if (line.startsWith("# ")) {
           questTitleMd.push(line);
-          subquestTitlesMd.push("## Introduction");
         } else if (line.startsWith("## ")) {
           subquestTitlesMd.push(line);
         } else if (subquestTitlesMd.length === 0 && questTitleMd.length > 0) {
@@ -81,7 +80,8 @@ export default function Quest({
           }${line}`;
         }
       });
-      // subquestTitlesMd.shift("## Introduction");
+      subquestTitlesMd.unshift("## Introduction");
+      subQuestContentMd.unshift(questDetailsMd.join("\n"));
       setquestTitle(questTitleMd[0]);
       setquestDetails(questDetailsMd.join("\n"));
       setsubquestTitles(subquestTitlesMd);

@@ -31,6 +31,90 @@
         "github_url": "https://raw.githubusercontent.com/CreatorOS/Launching-our-own-coin/main",
         "level": "Beginner",
         "desc": "In this quest, we will create and launch our coin a.k.a. as cryptocurrency."
+      },
+      {
+        "slug": "Incentivize-people-to-own-your-coins",
+        "questName": "Incentivize people to own your coins",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/Incentivize-people-to-own-your-coins/main",
+        "level": "Beginner",
+        "desc": ""
+      },
+      {
+        "slug": "Sending-notifications",
+        "questName": "Sending notifications in Ethereum",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/Sending-notifications/main",
+        "level": "Beginner",
+        "desc": ""
+      },
+      {
+        "slug": "Live-tracking-of-our-coin",
+        "questName": "Live tracking of your own coin",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/Live-tracking-of-our-coin/main",
+        "level": "Beginner",
+        "desc": ""
+      },
+      {
+        "slug": "Incentivize-people-to-own-your-coins",
+        "questName": "Incentivize people to buy your coin",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/Incentivize-people-to-own-your-coins/main",
+        "level": "Beginner",
+        "desc": ""
+      },
+      {
+        "slug": "Launching-your-own-NFT",
+        "questName": "Launch your own nft",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/Launching-your-own-NFT/main",
+        "level": "Beginner",
+        "desc": ""
+      },
+      {
+        "slug": "Learning-Solidity-by-extending-Loot",
+        "questName": "Building on top of the loot nft project",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/Learning-Solidity-by-extending-Loot/main",
+        "level": "Beginner",
+        "desc": ""
+      },
+      {
+        "slug": "Generate-passive-income-with-your-own-Arbitrage-Trading-Bot",
+        "questName": "Generate passive income with your own arbitrage trading bot",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/Generate-passive-income-with-your-own-Arbitrage-Trading-Bot/main",
+        "level": "Beginner",
+        "desc": ""
+      },
+      {
+        "slug": "Coding-the-Arbitrage-Trading-Bot",
+        "questName": "Coding the arbitrage bot",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/Coding-the-Arbitrage-Trading-Bot/main",
+        "level": "Beginner",
+        "desc": ""
+      },
+      {
+        "slug": "Cloning-a-real-life-project-PoolTogether-100M-marketcap",
+        "questName": "Cloning a real life project - PoolTogether ($100M marketcap)",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/Cloning-a-real-life-project-PoolTogether-100M-marketcap/main",
+        "level": "Beginner",
+        "desc": ""
+      },
+      {
+        "slug": "Create-a-prize-pool-on-PoolTogether-using-builder-UI",
+        "questName": "Create a prize pool on PoolTogether using builder UI",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/Create-a-prize-pool-on-PoolTogether-using-builder-UI/main",
+        "level": "Beginner",
+        "desc": ""
+      },
+      {
+        "slug": "Building-a-Russian-Roulette-dapp-on-Ethereum",
+        "questName": "Building a Russian Roulette dapp on Ethereum",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/Building-a-Russian-Roulette-dapp-on-Ethereum/main",
+        "level": "Beginner",
+        "desc": ""
+      },
+      {
+        "slug": "Building-your-own-Staking-Contract",
+        "questName": "Building your own Staking Contract",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/Building-your-own-Staking-Contract/main",
+        "level": "Beginner",
+        "desc": ""
       }
     ]
   },
@@ -45,6 +129,69 @@
         "github_url": "https://raw.githubusercontent.com/altsam/create_an_airdrop_program/main",
         "level": "Beginner",
         "desc": "In this quest, you’ll learn how to develop an application leveraging the Solana blockchain - which is the fastest growing blockchain community in the world. We’ll be developing an airdrop program throughout this quest."
+      },
+      {
+        "slug": "roulette_game_in_solana",
+        "questName": "Create a roulette game in Solana",
+        "github_url": "https://raw.githubusercontent.com/vamsi937/roulette_game_in_solana/main",
+        "level": "Beginner",
+        "desc": ""
+      },
+      {
+        "slug": "solana-calculator",
+        "questName": "Create a calculator using rust programs",
+        "github_url": "https://raw.githubusercontent.com/SahilVasava/solana-calculator/patch-1",
+        "level": "Beginner",
+        "desc": ""
+      },
+      {
+        "slug": "create_crypto_with_solana_cli",
+        "questName": "Create your personal token using Solana CLI",
+        "github_url": "https://raw.githubusercontent.com/altsam/create_crypto_with_solana_cli/main",
+        "level": "Beginner",
+        "desc": ""
+      },
+      {
+        "slug": "create_candy_machine_for_minting_nft",
+        "questName": "Create an NFT candy machine",
+        "github_url": "https://raw.githubusercontent.com/vamsisol/create_candy_machine_for_minting_nft/main",
+        "level": "Beginner",
+        "desc": ""
+      },
+      {
+        "slug": "create_nft_minting_website",
+        "questName": "Create your Pokemon NFT minting website",
+        "github_url": "https://raw.githubusercontent.com/vamsisol/create_nft_minting_website/main",
+        "level": "Beginner",
+        "desc": ""
+      },
+      {
+        "slug": "create_crypto_with_js",
+        "questName": "Create your personal cryptocurrency with Javascript",
+        "github_url": "https://raw.githubusercontent.com/altsam/create_crypto_with_js/main/",
+        "level": "Beginner",
+        "desc": ""
+      },
+      {
+        "slug": "solana-messaging-app",
+        "questName": "Build a messaging app using Solana smart contracts in Rust",
+        "github_url": "https://raw.githubusercontent.com/saxenism/solana-messaging-app/master",
+        "level": "Beginner",
+        "desc": ""
+      },
+      {
+        "slug": "create_personal_wallet",
+        "questName": "Create your personal Solana wallet",
+        "github_url": "https://raw.githubusercontent.com/altsam/create_personal_wallet/main",
+        "level": "Beginner",
+        "desc": ""
+      },
+      {
+        "slug": "solana-my-money",
+        "questName": "Create your personal token with rust smart contracts",
+        "github_url": "https://raw.githubusercontent.com/saxenism/solana-my-money/master",
+        "level": "Beginner",
+        "desc": ""
       }
     ]
   },
@@ -57,6 +204,13 @@
         "slug": "creating-nfts-using-near-on-rust",
         "questName": "Creating NFTs using NEAR on Rust",
         "github_url": "https://raw.githubusercontent.com/CreatorOS/Creating-NFTs-using-NEAR-on-Rust/main",
+        "level": "Beginner",
+        "desc": "In this quest, we’ll start building an NFT on NEAR using rust."
+      },
+      {
+        "slug": "Making-a-fully-featured-NFT-on-NEAR-in-Rust",
+        "questName": "Building an nft the correct way with rust",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/Making-a-fully-featured-NFT-on-NEAR-in-Rust/main",
         "level": "Beginner",
         "desc": "In this quest, we’ll start building an NFT on NEAR using rust."
       }
