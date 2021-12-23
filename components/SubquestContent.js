@@ -13,7 +13,7 @@ function SubquestContent() {
   return (
     <section className="  pb-10 lg:pt-0 markdown">
       <ReactMarkdown
-        className="font-Inter font-semibold text-lg mb-6"
+        className="font-Inter font-semibold text-lg"
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeRaw]}
       >

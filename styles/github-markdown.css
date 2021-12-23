@@ -37,7 +37,7 @@
 }
 
 .markdown h2 {
-  @apply leading-tight border-b text-2xl font-semibold mb-4 pb-2;
+  @apply leading-tight text-2xl font-semibold mb-4;
 }
 
 .markdown h3 {

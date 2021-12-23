@@ -5,11 +5,11 @@ import { ArrowRightIcon } from "@heroicons/react/solid";
 function CourseCards() {
   return (
     <div
-      className={` container lg:w-full left-0 right-0 mx-auto lg:absolute -bottom-[40%] lg:-bottom-[30%] xl:-bottom-[40%]   pb-8 px-6 lg:px-16 xl:px-0 xl:-left-1/2 xl:-right-1/2  xl:mx-auto `}
+      className={` container lg:w-full left-0 right-0 mx-auto lg:absolute -bottom-[40%] lg:-bottom-[30%] xl:-bottom-[40%]   pb-8 px-6 lg:px-16 xl:px-0 xl:-left-1/2 xl:-right-1/2 z-10  xl:mx-auto `}
     >
       <div className="py-3  ">
         <Link href="/tracks">
-          <h3 className=" cursor-pointer group hover:underline text-center text-white font-Inter text-2xl">
+          <h3 className=" cursor-pointer w-fit mx-auto lg:ml-0 pl-0 lg:pl-6 xl:pl-11 group hover:underline text-center text-white font-Inter text-2xl">
             Explore all Tracks
             <ArrowRightIcon className="inline ml-2 my-auto group-hover:scale-150 group-hover:scale-y-[2] transition-transform duration-300 ease-linear origin-left text-white w-5 h-5" />
           </h3>
