@@ -15,7 +15,7 @@ function SubquestMenu() {
   return (
     <div className={`${showMenu ? "block" : "hidden"}`}>
       <div className="fixed lg:hidden h-screen w-screen bg-black opacity-40 top-0 right-0 z-10"></div>
-      <div className="fixed lg:relative flex flex-col items-center justify-center lg:justify-start top-0 right-0  min-h-screen lg:min-h-[538px] w-screen lg:w-[373px]   z-20 lg:z-auto">
+      <div className="fixed lg:relative flex flex-col items-center justify-center lg:justify-start lg:items-start top-0 right-0  min-h-screen lg:min-h-[538px] w-screen lg:w-[373px]   z-20 lg:z-auto">
         <div className=" relative w-[90%] h-[90%] py-8 px-6 rounded bg-white z-20 lg:z-auto opacity-100 shadow-lg">
           <button
             onClick={() => setShowMenu(false)}

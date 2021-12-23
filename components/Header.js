@@ -14,18 +14,15 @@ function Header() {
     <ul
       className={`${
         windowWidth >= 1024
-          ? " w-1/2 flex-row items-center justify-center space-x-8"
+          ? " w-1/2 flex-row items-center justify-end space-x-8"
           : "flex-col items-start  space-y-8 mb-8 "
       } flex    `}
     >
-      <li className="font-Inter text-xl whitespace-nowrap">
-        <a href="https://osdg.iiit.ac.in/web3hacks" target="_blank">
-          Hackathon
-        </a>
-      </li>
-      {/* <li className="font-Inter text-xl whitespace-nowrap">
-        <a href="#">Blog</a>
-      </li> */}
+      <Link href="/tracks">
+        <li className="font-Inter cursor-pointer text-xl whitespace-nowrap">
+          <a>Explore Tracks</a>
+        </li>
+      </Link>
       <li className="font-Inter text-xl whitespace-nowrap">
         <a href="https://discord.gg/tWg7Mb7KM7" target="_blank">
           Discord
@@ -70,8 +67,8 @@ function Header() {
   return (
     <>
       <header className={`sticky top-0 bg-white z-20`}>
-        <div className="container mx-auto flex flex-row items-center z-10 p-2  justify-between">
-          <div className="flex flex-row z-30 items-center ml-4 w-1/2 lg:w-1/3">
+        <div className="container mx-auto flex flex-row items-center z-10 py-2 px-8  justify-between">
+          <div className="flex flex-row z-30 items-center w-1/2 lg:w-1/3">
             <Link href="/">
               <div className="flex flex-row cursor-pointer items-center">
                 <Image
@@ -86,7 +83,7 @@ function Header() {
             </Link>
           </div>
           <div
-            className="inline-flex z-30 lg:hidden p-[5px] mr-4 "
+            className="inline-flex z-30 lg:hidden p-[5px] "
             onClick={() => setMenuState(!menuState)}
           >
             {menuState ? (
@@ -97,9 +94,9 @@ function Header() {
           </div>
 
           {windowWidth >= 1024 && (
-            <div className="flex lg:relative h-full flex-col lg:flex-row  lg:inline-flex lg:flex-grow justify-between ">
+            <div className="flex lg:relative h-full flex-col lg:flex-row  lg:inline-flex lg:flex-grow justify-end ">
               {menuItems()}
-              {mobileButtons()}
+              {/* {mobileButtons()} */}
             </div>
           )}
         </div>
@@ -111,7 +108,7 @@ function Header() {
           } transition-transform duration-150 flex  w-full  h-full  fixed left-0 bottom-0 bg-white z-10 justify-start   pt-16  px-11  flex-col lg:flex-row  lg:inline-flex lg:flex-grow `}
         >
           {menuItems()}
-          {mobileButtons()}
+          {/* {mobileButtons()} */}
         </div>
       )}
     </>

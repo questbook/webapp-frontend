@@ -19,19 +19,28 @@ function Footer() {
               Connect with us on
             </p>
             <div className="flex justify-between w-40 ">
-              <a href="#">
+              <a
+                href="https://www.facebook.com/Questbookapp-100777945629014/"
+                target="_blank"
+              >
                 <Image src={"/images/facebook.svg"} width={20} height={20} />
               </a>
-              <a href="#">
+              <a href="https://www.twitter.com/questbookapp" target="_blank">
                 <Image src={"/images/twitter.svg"} width={20} height={20} />
               </a>
-              <a href="#">
+              <a
+                href="https://www.linkedin.com/company/questbookapp"
+                target="_blank"
+              >
                 <Image src={"/images/linkedin.svg"} width={20} height={20} />
               </a>
-              <a href="#">
+              <a
+                href="https://www.youtube.com/channel/UCoz9PgPqhvXwv6J38RmpZeg"
+                target="_blank"
+              >
                 <Image src={"/images/youtube.svg"} width={20} height={20} />
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/questbookapp" target="_blank">
                 <Image src={"/images/instagram.svg"} width={20} height={20} />
               </a>
             </div>
@@ -39,13 +48,6 @@ function Footer() {
         </div>
         <div className=" -order-1 lg:order-none basis-[10%] lg:basis-1/4 pt-3 lg:pt-6 px-8 xl:px-16">
           <div className="flex flex-row justify-center lg:justify-start lg:flex-col gap-5">
-            <a
-              href="https://osdg.iiit.ac.in/web3hacks"
-              target="_blank"
-              className="font-Inter font-normal opacity-70 text-sm lg:text-base"
-            >
-              Hackathon
-            </a>
             <a
               href="https://discord.gg/tWg7Mb7KM7"
               target="_blank"
