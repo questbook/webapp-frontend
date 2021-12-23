@@ -6,7 +6,7 @@ function PartnersSection() {
       className={`  overflow-hidden w-full  h-[252px] lg:h-[466px] pt-8  text-center bg-gradient-to-b from-[#737DF0] to-[#505AD5] `}
     >
       <div className="container mx-auto relative h-full">
-        <h2 className="font-Inter font-bold text-3xl lg:text-6xl text-white mb-3 ">
+        <h2 className="font-Inter tracking-tight font-bold text-3xl lg:text-6xl text-white mb-3 ">
           Our partners
         </h2>
         <p className="font-Inter font-normal text-xl  text-white ">

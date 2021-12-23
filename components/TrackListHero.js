@@ -53,7 +53,7 @@ function TrackListHero() {
               scrollY >= sectionTop
                 ? " text-lg line-clamp-1 "
                 : "text-3xl lg:text-5xl"
-            } font-Inter font-bold  text-white w-80 sm:w-[30rem] `}
+            } font-Inter font-bold tracking-tight text-white w-80 sm:w-[30rem] `}
           >
             All Tracks
           </h2>
