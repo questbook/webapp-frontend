@@ -9,13 +9,13 @@ function CourseCards() {
     >
       <div className="py-3  ">
         <Link href="/tracks">
-          <h3 className=" cursor-pointer w-fit mx-auto lg:ml-0 pl-0 lg:pl-6 xl:pl-11 group hover:underline text-center text-white font-Inter text-2xl">
+          <h3 className=" cursor-pointer w-fit mx-auto lg:ml-0  group hover:underline text-center text-white font-Inter text-2xl">
             Explore all Tracks
             <ArrowRightIcon className="inline ml-2 my-auto group-hover:scale-150 group-hover:scale-y-[2] transition-transform duration-300 ease-linear origin-left text-white w-5 h-5" />
           </h3>
         </Link>
       </div>
-      <div className="flex  flex-wrap  justify-between  gap-x-1  lg:gap-x-1 gap-y-6 ">
+      <div className="flex  flex-wrap justify-center  sm:justify-between  gap-x-1 gap-y-6 ">
         <CourseCard
           text={"Build on"}
           subtext={"Ethereum"}
