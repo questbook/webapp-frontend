@@ -2,9 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 function CourseCard({ text, subtext, imgSrc, dimensions, url }) {
-  console.log(text, text === "", typeof text);
   return (
-    <div className="flex flex-col items-center justify-center w-40  xl:w-72 h-72  xl:h-96 rounded-xl bg-gradient-to-t from-[#FEFEFE] to-[#F1F2FF]  shadow-[0_13px_22px_rgba(73,83,179,0.19)]">
+    <div
+      className={`${
+        text === undefined ? "mx-auto" : ""
+      } flex flex-col items-center justify-center w-40  xl:w-72 h-72  xl:h-96 rounded-xl bg-gradient-to-t from-[#FEFEFE] to-[#F1F2FF]  shadow-[0_13px_22px_rgba(73,83,179,0.19)]`}
+    >
       <div className="basis-2/4 flex flex-col justify-end pb-8 ">
         <div className="relative w-[55px] h-[63px] xl:w-[75px] xl:[93px] ">
           <Image
