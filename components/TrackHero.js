@@ -94,7 +94,7 @@ function TrackHero() {
           <p
             className={`${
               scrollY >= sectionTop ? "hidden" : "line-clamp-6 lg:line-clamp-4"
-            } font-Inter    text-xl text-white text-opacity-75 lg:w-[41rem] `}
+            } font-Inter    text-base leading-7 text-white text-opacity-75 lg:w-[41rem] `}
           >
             {currentTrackDesc}
           </p>

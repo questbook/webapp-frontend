@@ -47,7 +47,7 @@ export default function Track({ track, trackNameKey }) {
       <main
         className={`${
           scrollY > 48 ? "" : ""
-        } container my-8 px-8 lg:my-16 h-auto lg:flex lg:flex-row justify-between  mx-auto`}
+        } container my-8 px-8 lg:my-16 h-auto min-h-[60vh]  lg:flex lg:flex-row justify-between  mx-auto`}
       >
         <Quests />
         <TrackHeroInfoVertical />

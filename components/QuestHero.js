@@ -100,7 +100,7 @@ function QuestHero() {
               className={`${
                 scrollY >= sectionTop
                   ? "lg:text-xl lg:w-[53rem] line-clamp-3 lg:line-clamp-1 "
-                  : "lg:text-3xl lg:w-[44rem] line-clamp-2 lg:line-clamp-3 "
+                  : "lg:text-4xl lg:w-[44rem] line-clamp-2 lg:line-clamp-3 "
               } font-Inter text-sm sm:text-lg tracking-tight font-bold  text-white w-56  sm:w-[30rem]   2xl:w-[62rem] `}
               remarkPlugins={[remarkGfm]}
               rehypePlugins={[rehypeRaw]}

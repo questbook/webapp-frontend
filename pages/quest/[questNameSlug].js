@@ -103,7 +103,7 @@ export default function Quest({
       </Head>
       <Header />
       <QuestHero />
-      <main className="container mx-auto px-8 flex flex-row h-auto  lg:mt-16 mb-8">
+      <main className="container mx-auto px-8 flex flex-row h-auto min-h-[50vh]  lg:mt-16 mb-8">
         <SubquestMenu />
         <div className="flex flex-col mx-auto  w-full overflow-auto">
           <button
