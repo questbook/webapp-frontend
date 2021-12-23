@@ -47,7 +47,7 @@ const tweets = [
 function CommunitySection() {
   return (
     <section
-      className={` relative  pt-20  w-full h-full flex flex-col lg:min-h-[704px] bg-community-gradient text-center`}
+      className={` relative  pt-20 lg:pt-56  w-full h-full flex flex-col lg:min-h-[704px] bg-community-gradient text-center`}
     >
       <div className="container mx-auto mt-auto  text-center ">
         <h2 className="font-Inter font-bold text-3xl lg:text-6xl text-white mb-3 mt-auto ">
@@ -55,12 +55,15 @@ function CommunitySection() {
           like you!
         </h2>
         <p className="font-Inter font-normal text-xl  text-white ">
-          Don't believe us? Seee what they are saying about Questbook.
+          Don't believe us? See what they are saying about Questbook.
         </p>
-        <div className=" lg:w-full  flex flex-row lg:justify-center gap-4 overflow-x-scroll lg:overflow-x-hidden pt-12 ">
-          {tweets.map((tweet) => (
-            <TweetCard key={tweet.id} {...tweet} />
-          ))}
+        <div className="pt-16">
+          <div className="shoutout-embed" data-wall="questbook-webapp"></div>
+          <script
+            className="shoutout-script"
+            src="https://embed.shoutout.so/embed.js"
+            defer
+          ></script>
         </div>
       </div>
     </section>
