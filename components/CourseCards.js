@@ -11,7 +11,7 @@ function CourseCards() {
         <Link href="/tracks">
           <h3 className=" cursor-pointer group hover:underline text-center text-white font-Inter text-2xl">
             Explore all Tracks
-            <ArrowRightIcon className="inline ml-2 my-auto group-hover:scale-150 group-hover:scale-y-[2] transition-transform duration-300 ease-linear origin-left text-white w-4 h-4" />
+            <ArrowRightIcon className="inline ml-2 my-auto group-hover:scale-150 group-hover:scale-y-[2] transition-transform duration-300 ease-linear origin-left text-white w-5 h-5" />
           </h3>
         </Link>
       </div>

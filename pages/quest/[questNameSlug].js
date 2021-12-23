@@ -20,6 +20,7 @@ export default function Quest({
   level,
 }) {
   const {
+    githubRepoUrl,
     setgithubRepoUrl,
     questTitle,
     setquestTitle,
@@ -47,6 +48,12 @@ export default function Quest({
     setcurrentQuestLevel(level);
     setCurrentSubQuest(0);
   }, [github_url, questName, trackNameKey, trackName, level]);
+
+  useEffect(() => {
+    if (window.outerWidth >= 1024) {
+      setShowMenu(true);
+    }
+  }, []);
 
   useEffect(() => {
     if (github_url && data) {
@@ -96,14 +103,14 @@ export default function Quest({
       </Head>
       <Header />
       <QuestHero />
-      <main className="container mx-auto flex flex-row h-auto  lg:mt-16 mb-8">
+      <main className="container mx-auto px-8 flex flex-row h-auto  lg:mt-16 mb-8">
         <SubquestMenu />
-        <div className="flex flex-col mx-auto xl:basis-3/4 w-full overflow-auto">
+        <div className="flex flex-col mx-auto  w-full overflow-auto">
           <button
             onClick={() => setShowMenu(true)}
             className={`${
               showMenu ? "lg:hidden" : "lg:flex w-fit"
-            } hidden items-center space-x-2 ml-8`}
+            } hidden items-center space-x-2 mb-2`}
           >
             <span className="font-Inter font-bold text-base text-[#7A64F6]">
               Show quests
@@ -114,6 +121,20 @@ export default function Quest({
           <SubquestNav />
         </div>
       </main>
+      <div className=" w-full p-3 text-center bg-[#85A1BA]">
+        <p className="font-Inter font-normal text-base text-white ">
+          This quest is open-source. If you find any issues and want to improve
+          the content or contribute in any way, please{" "}
+          <a
+            href={githubRepoUrl}
+            className="text-[#8BE3FF] underline"
+            target="_blank"
+          >
+            <span>fork this repo</span>
+          </a>{" "}
+          and raise a PR. We appreciate it. :)
+        </p>
+      </div>
       <Footer />
     </>
   );

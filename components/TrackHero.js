@@ -48,21 +48,19 @@ function TrackHero() {
           scrollY >= sectionTop
             ? " h-[60px] lg:h-[109px]  py-4"
             : "h-[496px] sm:h-[400px] lg:h-[372px] pt-8 pb-24"
-        } fixed top-12   w-full overflow-x-clip bg-track-hero-gradient px-4 xl:px-28 transition-[padding]  duration-300 ease-linear  linear  mb-12 z-[9] `}
+        } fixed top-12   w-full overflow-x-clip bg-track-hero-gradient  transition-[padding]  duration-300 ease-linear  linear  mb-12 z-[9] `}
       >
         <div
           className={`${
             scrollY >= sectionTop
               ? "flex-row lg:flex-col space-x-4  lg:space-x-0 lg:space-y-4"
               : "flex-col space-y-4"
-          } container mx-auto relative  flex transition-[flex-direction] duration-300 `}
+          } container mx-auto relative px-8  flex transition-[flex-direction] duration-300 `}
         >
           <div
             className={`${
-              scrollY >= sectionTop
-                ? "hidden lg:flex lg:flex-row lg:items-center lg:space-x-1"
-                : "hidden"
-            } `}
+              scrollY >= sectionTop ? "" : ""
+            } hidden lg:flex lg:flex-row lg:items-center lg:space-x-1`}
           >
             <Link href="/tracks">
               <a className="font-Inter text-base font-normal text-white opacity-60">

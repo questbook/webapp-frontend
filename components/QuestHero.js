@@ -55,10 +55,10 @@ function QuestHero() {
           scrollY >= sectionTop
             ? "fixed lg:h-[136px] top-12"
             : "fixed lg:h-[302px]"
-        } top-12  lg:overflow-y-hidden  py-4 lg:py-8  h-28  w-full overflow-x-clip bg-track-hero-gradient px-4 xl:px-28 transition-[padding]  duration-300 ease-linear  linear  mb-12 z-[9] `}
+        } top-12  lg:overflow-y-hidden  py-4 lg:py-8  h-28  w-full overflow-x-clip bg-track-hero-gradient transition-[padding]  duration-300 ease-linear  linear  mb-12 z-[9] `}
       >
         <div
-          className={` container mx-auto h-full relative  flex flex-row space-x-2 transition-[flex-direction] duration-300 `}
+          className={` container px-8 mx-auto h-full relative  flex flex-row space-x-2 lg:space-x-0 transition-[flex-direction] duration-300 `}
         >
           <Link href={`/tracks/${currentTrackNameKey}`}>
             <ArrowCircleLeftIcon className="lg:hidden w-7 h-7 text-white" />
@@ -111,7 +111,7 @@ function QuestHero() {
           <div
             className={`${
               scrollY >= sectionTop ? "" : "   lg:top-auto  lg:-bottom-24"
-            } absolute -right-8 lg:right-0 sm:right-0  rotate-12 `}
+            } absolute  right-0 lg:right-0 sm:right-0  rotate-12 `}
           >
             <div
               className={`${
