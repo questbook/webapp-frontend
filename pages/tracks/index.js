@@ -20,7 +20,7 @@ export default function TrackList({ trackList }) {
       </Head>
       <Header />
       <TrackListHero />
-      <main className={`container my-8  h-auto  mx-auto`}>
+      <main className={`container my-16   h-screen  mx-auto`}>
         <CourseGrid />
       </main>
       <Footer />

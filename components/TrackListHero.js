@@ -39,14 +39,14 @@ function TrackListHero() {
           scrollY >= sectionTop
             ? " h-[60px] lg:h-[100px]   py-4"
             : "h-[133px] lg:h-[214px]  pt-8 pb-8"
-        } fixed top-12   w-full overflow-x-clip bg-track-hero-gradient px-4 xl:px-28 transition-[padding]  duration-300 ease-linear  linear  mb-12 z-[9] `}
+        } fixed top-12   w-full overflow-x-clip bg-track-hero-gradient   transition-[padding]  duration-300 ease-linear  linear  mb-12 z-[9] `}
       >
         <div
           className={`${
             scrollY >= sectionTop
               ? "flex-row lg:flex-col space-x-4  lg:space-x-0 lg:space-y-4"
               : "flex-col space-y-4"
-          } container h-full mx-auto relative  flex transition-[flex-direction] duration-300 `}
+          } container px-8 h-full mx-auto relative  flex transition-[flex-direction] duration-300 `}
         >
           <h2
             className={`${

@@ -11,7 +11,7 @@ function SubquestContent() {
     window.scrollTo(0, 0);
   }, [currentSubQuest]);
   return (
-    <section className=" px-8 pb-10 lg:pt-0 markdown">
+    <section className="  pb-10 lg:pt-0 markdown">
       <ReactMarkdown
         className="font-Inter font-semibold text-lg mb-6"
         remarkPlugins={[remarkGfm]}
