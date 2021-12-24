@@ -4,7 +4,7 @@ function TrackListHero() {
   return (
     <>
       <section
-        className={` h-[133px] lg:h-[214px]  pt-8 pb-8  w-full overflow-x-clip bg-track-hero-gradient    mb-12  `}
+        className={` h-[133px] lg:h-[214px]  pt-8 pb-8  w-full overflow-x-clip bg-track-hero-gradient `}
       >
         <div className={` container px-8 h-full mx-auto relative  flex `}>
           <h2
