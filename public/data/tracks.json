@@ -185,6 +185,20 @@
         "github_url": "https://raw.githubusercontent.com/saxenism/solana-my-money/master",
         "level": "Beginner",
         "desc": "In this quest, we will be developing our own crypto-currency on the Solana blockchain or our own spl-token in the Solana lingo. This essentially means that once you are done with this quest, you will be able to make your crypto-currency using Solana programs and use that to do whatever you can think of, including using it as a fan token, a social token, a governance token, a utility token or a coin."
+      },
+      {
+        "slug": "staking-solana",
+        "questName": "Staking on Solana",
+        "github_url": "https://raw.githubusercontent.com/solanauniversity/staking-solana/main",
+        "level": "Beginner",
+        "desc": "In this quest we will deep dive into the whats, hows of staking on Solana Blockchain. Staking is one of the ways of generating more money on the existing SOL coins we hold."
+      },
+      {
+        "slug": "create-burn-nft-solana",
+        "questName": "Create and Burn NFT on Solana Blockchain using only Web3",
+        "github_url": "https://raw.githubusercontent.com/solanauniversity/create-burn-nft-solana/main",
+        "level": "Beginner",
+        "desc": "In this quest we will deep dive into the whats, hows of staking on Solana Blockchain. Staking is one of the ways of generating more money on the existing SOL coins we hold."
       }
     ]
   },
@@ -193,6 +207,48 @@
     "cardThumbnail": "near.png",
     "desc": "NEAR Protocol is a decentralized application (dApp) platform that focuses on developer and user-friendliness. Near supports multiple programming languages including Rust, AssemblyScript and Solidity.",
     "quests": [
+      {
+        "slug": "creating-near-wallets",
+        "questName": "Create your NEAR MainNet and TestNet Wallets",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/NEAR-Quest1/main",
+        "level": "Beginner",
+        "desc": "In this quest, we will learn how to create our own NEAR MainNet and TestNet Wallets."
+      },
+      {
+        "slug": "coin-toss-game-near",
+        "questName": "Build a Coin-Toss game using NEAR in AssemblyScript",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/coin-toss-game-near/main",
+        "level": "Beginner",
+        "desc": "In this quest, you will learn to build a simple coin-toss game using the NEAR Protocol."
+      },
+      {
+        "slug": "Build-a-platform-for-NGOs-using-NEAR-assemblyscript",
+        "questName": "Build a platform for NGOs using NEAR in AssemblyScript",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/Build-a-platform-for-NGOs-using-NEAR-assemblyscript/main",
+        "level": "Beginner",
+        "desc": "In this quest, we will build a smart contract which would allow NGOs to register individual projects that they are running throughout the year and the ability for users to donate to these individual projects/causes."
+      },
+      {
+        "slug": "Building-an-Auction-contract-on-NEAR-assemblyscript",
+        "questName": "Building an Auction contract on NEAR in AssemblyScript",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/Building-an-Auction-contract-on-NEAR-assemblyscript/main",
+        "level": "Beginner",
+        "desc": "In this quest, we will learn how to build an auction smart contract on NEAR using AssemblyScript."
+      },
+      {
+        "slug": "Building-a-TicTacToe-game-on-NEAR-assemblyscript",
+        "questName": "Building a TicTacToe game on NEAR in AssemblyScript",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/Building-a-TicTacToe-game-on-NEAR-assemblyscript/main",
+        "level": "Beginner",
+        "desc": "In this quest, you will learn how to create a TicTacToe game on the NEAR blockchain using AssemblyScript."
+      },
+      {
+        "slug": "Building-a-simple-voting-contract-on-NEAR-assemblyscript",
+        "questName": "Building a simple voting contract on NEAR in AssemblyScript",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/Building-a-simple-voting-contract-on-NEAR-assemblyscript/main",
+        "level": "Beginner",
+        "desc": "In this quest, we will write a simple voting contract on NEAR using AssemblyScript."
+      },
       {
         "slug": "creating-nfts-using-near-on-rust",
         "questName": "Creating NFTs using NEAR on Rust",
@@ -206,6 +262,13 @@
         "github_url": "https://raw.githubusercontent.com/CreatorOS/Making-a-fully-featured-NFT-on-NEAR-in-Rust/main",
         "level": "Beginner",
         "desc": "In this quest, we’ll start building an NFT on NEAR using rust."
+      },
+      {
+        "slug": "Building-a-platform-to-help-people-launch-their-NGOs-on-Near-protocol",
+        "questName": "Building a platform to help people launch their NGOs on Near protocol",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/Building-a-platform-to-help-people-launch-their-NGOs-on-Near-protocol/main",
+        "level": "Beginner",
+        "desc": "In this quest, we’ll build a platform where people can come and register their NGOs, in those NGOs anyone can create projects and add cause with fund requirement details."
       }
     ]
   },
@@ -220,6 +283,20 @@
         "github_url": "https://raw.githubusercontent.com/CreatorOS/Creating-a-simple-blockchain-in-Python/main",
         "level": "Beginner",
         "desc": "In this chain agnostic quest, we create a simple blockchain in Python."
+      }
+    ]
+  },
+  "build-on-polygon": {
+    "trackName": "Build on Polygon",
+    "cardThumbnail": "build-on-polygon.png",
+    "desc": "Polygon is a protocol and a framework for building and connecting Ethereum-compatible blockchain networks. Aggregating scalable solutions on Ethereum supporting a multi-chain Ethereum ecosystem.",
+    "quests": [
+      {
+        "slug": "polygon-loan-application",
+        "questName": "Building a small loan application on polygon",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/polygon-loan-application/main",
+        "level": "Beginner",
+        "desc": "In this quest you will learn all about the basics of developing DeFi applications on Polygon."
       }
     ]
   }
