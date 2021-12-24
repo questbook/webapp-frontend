@@ -38,11 +38,11 @@ function CourseCards() {
           url={"/tracks/build-on-near"}
         />
         <CourseCard
-          text={"Fundamentals of"}
-          subtext={"Blockchain"}
-          imgSrc={"/images/bc.png"}
+          text={"Build on"}
+          subtext={"Polygon"}
+          imgSrc={"/images/build-on-polygon.png"}
           dimensions={[99, 90]}
-          url={"/tracks/fundamentals-of-blockchain"}
+          url={"/tracks/build-of-polygon"}
         />
       </div>
     </div>
