@@ -42,7 +42,7 @@ function CourseCards() {
           subtext={"Polygon"}
           imgSrc={"/images/build-on-polygon.png"}
           dimensions={[99, 90]}
-          url={"/tracks/build-of-polygon"}
+          url={"/tracks/build-on-polygon"}
         />
       </div>
     </div>

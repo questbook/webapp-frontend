@@ -231,21 +231,21 @@
       {
         "slug": "Building-an-Auction-contract-on-NEAR-assemblyscript",
         "questName": "Building an Auction contract on NEAR in AssemblyScript",
-        "github_url": "https://raw.githubusercontent.com/CreatorOS/Building-an-Auction-contract-on-NEAR-assemblyscript/main",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/Building-an-Auction-contract-on-NEAR-assemblyscript/master",
         "level": "Beginner",
         "desc": "In this quest, we will learn how to build an auction smart contract on NEAR using AssemblyScript."
       },
       {
         "slug": "Building-a-TicTacToe-game-on-NEAR-assemblyscript",
         "questName": "Building a TicTacToe game on NEAR in AssemblyScript",
-        "github_url": "https://raw.githubusercontent.com/CreatorOS/Building-a-TicTacToe-game-on-NEAR-assemblyscript/main",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/Building-a-TicTacToe-game-on-NEAR-assemblyscript/master",
         "level": "Beginner",
         "desc": "In this quest, you will learn how to create a TicTacToe game on the NEAR blockchain using AssemblyScript."
       },
       {
         "slug": "Building-a-simple-voting-contract-on-NEAR-assemblyscript",
         "questName": "Building a simple voting contract on NEAR in AssemblyScript",
-        "github_url": "https://raw.githubusercontent.com/CreatorOS/Building-a-simple-voting-contract-on-NEAR-assemblyscript/main",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/Building-a-simple-voting-contract-on-NEAR-assemblyscript/master",
         "level": "Beginner",
         "desc": "In this quest, we will write a simple voting contract on NEAR using AssemblyScript."
       },
@@ -272,20 +272,6 @@
       }
     ]
   },
-  "fundamentals-of-blockchain": {
-    "trackName": "Fundamentals of Blockchain",
-    "cardThumbnail": "bc.png",
-    "desc": "",
-    "quests": [
-      {
-        "slug": "creating-a-simple-blockchain-in-python",
-        "questName": "Creating a simple blockchain in Python",
-        "github_url": "https://raw.githubusercontent.com/CreatorOS/Creating-a-simple-blockchain-in-Python/main",
-        "level": "Beginner",
-        "desc": "In this chain agnostic quest, we create a simple blockchain in Python."
-      }
-    ]
-  },
   "build-on-polygon": {
     "trackName": "Build on Polygon",
     "cardThumbnail": "build-on-polygon.png",
@@ -297,6 +283,20 @@
         "github_url": "https://raw.githubusercontent.com/CreatorOS/polygon-loan-application/main",
         "level": "Beginner",
         "desc": "In this quest you will learn all about the basics of developing DeFi applications on Polygon."
+      }
+    ]
+  },
+  "fundamentals-of-blockchain": {
+    "trackName": "Fundamentals of Blockchain",
+    "cardThumbnail": "bc.png",
+    "desc": "",
+    "quests": [
+      {
+        "slug": "creating-a-simple-blockchain-in-python",
+        "questName": "Creating a simple blockchain in Python",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/Creating-a-simple-blockchain-in-Python/main",
+        "level": "Beginner",
+        "desc": "In this chain agnostic quest, we create a simple blockchain in Python."
       }
     ]
   }
