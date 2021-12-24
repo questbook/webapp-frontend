@@ -69,7 +69,7 @@
 }
 
 .markdown pre code {
-  @apply block bg-transparent p-0  overflow-scroll rounded-none;
+  @apply block bg-transparent p-0  overflow-auto rounded-none;
 }
 
 .markdown ul {

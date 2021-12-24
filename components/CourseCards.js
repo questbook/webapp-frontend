@@ -5,7 +5,7 @@ import { ArrowRightIcon } from "@heroicons/react/solid";
 function CourseCards() {
   return (
     <div
-      className={` container lg:w-full left-0 right-0 mx-auto lg:absolute -bottom-[40%] lg:-bottom-[30%] xl:-bottom-[40%]   pb-8 px-6 lg:px-16 xl:px-0 xl:-left-1/2 xl:-right-1/2 z-10  xl:mx-auto `}
+      className={` container lg:w-full left-0 right-0 mx-auto lg:absolute -bottom-[40%] lg:-bottom-[30%] xl:-bottom-[40%]   pb-8 px-6 lg:px-16 xl:px-8 xl:-left-1/2 xl:-right-1/2 z-10  xl:mx-auto `}
     >
       <div className="py-3  ">
         <Link href="/tracks">
@@ -42,7 +42,7 @@ function CourseCards() {
           subtext={"Polygon"}
           imgSrc={"/images/build-on-polygon.png"}
           dimensions={[99, 90]}
-          url={"/tracks/build-of-polygon"}
+          url={"/tracks/build-on-polygon"}
         />
       </div>
     </div>

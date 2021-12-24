@@ -96,14 +96,14 @@ export default function Quest({
     }
   }, [data]);
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Head>
         <title>Questbook</title>
         <link rel="icon" href="/images/qb_menu_logo.svg" />
       </Head>
       <Header />
       <QuestHero />
-      <main className="container mx-auto px-8 flex flex-row h-auto min-h-[50vh]  lg:mt-16 mb-8">
+      <main className="container mx-auto px-8 flex flex-row h-auto  lg:mt-16 mb-8">
         <SubquestMenu />
         <div className="flex flex-col mx-auto  w-full overflow-auto">
           <button
@@ -121,7 +121,7 @@ export default function Quest({
           <SubquestNav />
         </div>
       </main>
-      <div className=" w-full p-3 text-center bg-[#85A1BA]">
+      <div className=" w-full p-3 mt-auto text-center bg-[#85A1BA]">
         <p className="font-Inter font-normal text-base text-white ">
           This quest is open-source. If you find any issues and want to improve
           the content or contribute in any way, please{" "}
@@ -136,7 +136,7 @@ export default function Quest({
         </p>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 

@@ -1,7 +1,9 @@
 import Image from "next/image";
-function Footer() {
+function Footer({ cname }) {
   return (
-    <footer className=" text-white py-6 px-12 sm:px-4 lg:px-16  w-full h-[252px]  bg-gradient-to-t from-[#262626] to-[#383838] ">
+    <footer
+      className={`${cname} text-white py-6 px-12 sm:px-4 lg:px-16  w-full h-[252px]  bg-gradient-to-t from-[#262626] to-[#383838] `}
+    >
       <div className="container mx-auto flex flex-col sm:flex-row justify-between">
         <div className="basis-1/3 lg:basis-1/4 pt-3 lg:pt-6 px-0 xl:px-16 ">
           <div className="flex flex-row justify-center lg:justify-start  mb-5">
@@ -51,7 +53,7 @@ function Footer() {
             <a
               href="https://discord.gg/tWg7Mb7KM7"
               target="_blank"
-              className="font-Inter font-normal opacity-70 text-sm lg:text-base"
+              className="font-Inter w-fit font-normal opacity-70 text-sm lg:text-base"
             >
               Discord
             </a>
