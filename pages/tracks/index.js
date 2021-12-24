@@ -13,18 +13,18 @@ export default function TrackList({ trackList }) {
     setTrackList(trackList);
   }, [trackList]);
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Head>
         <title>Questbook</title>
         <link rel="icon" href="/images/qb_menu_logo.svg" />
       </Head>
       <Header />
       <TrackListHero />
-      <main className={`container my-16   h-screen  mx-auto`}>
+      <main className={`container my-16  mx-auto`}>
         <CourseGrid />
       </main>
-      <Footer />
-    </>
+      <Footer cname="mt-auto" />
+    </div>
   );
 }
 

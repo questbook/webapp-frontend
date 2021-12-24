@@ -1,4 +1,3 @@
-import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -10,7 +9,7 @@ import { useAppContext } from "../context/state";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
-import tracks from "../public/data/tracks.json";
+
 function QuestHero() {
   const {
     questTitle,
@@ -19,43 +18,12 @@ function QuestHero() {
     currentTrackName,
     currentQuestLevel,
   } = useAppContext();
-  const sectionRef = useRef();
-  const [sectionTop, setSectionTop] = useState(0);
-  const [scrollY, setScrollY] = useState(0);
   const { setShowMenu } = useAppContext();
-
-  useEffect(() => {
-    const { offsetTop, offsetHeight } = sectionRef.current;
-    setSectionTop(offsetTop);
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    handleScroll();
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <>
-      <div
-        className={`${
-          scrollY >= sectionTop ? " lg:h-[210px]" : "lg:h-[300px]"
-        }  h-[145px] invisible`}
-      ></div>
       <section
-        ref={sectionRef}
-        className={`${
-          scrollY >= sectionTop
-            ? "fixed lg:h-[136px] top-12"
-            : "fixed lg:h-[302px]"
-        } top-12  lg:overflow-y-hidden  py-4 lg:py-8  h-28  w-full overflow-x-clip bg-track-hero-gradient transition-[padding]  duration-300 ease-linear  linear  mb-12 z-[9] `}
+        className={` relative  lg:overflow-y-hidden  py-4 lg:py-8   w-full overflow-x-clip bg-track-hero-gradient  mb-12  `}
       >
         <div
           className={` container px-8 mx-auto h-full relative  flex flex-row space-x-2 lg:space-x-0 transition-[flex-direction] duration-300 `}
@@ -63,15 +31,9 @@ function QuestHero() {
           <Link href={`/tracks/${currentTrackNameKey}`}>
             <ArrowCircleLeftIcon className="lg:hidden w-7 h-7 text-white" />
           </Link>
-          <div
-            className={`${
-              scrollY >= sectionTop ? "" : "space-y-1"
-            } flex flex-col `}
-          >
+          <div className={` flex flex-col space-y-1`}>
             <div
-              className={`${
-                scrollY >= sectionTop ? " mb-4 " : "mb-8"
-              } hidden lg:flex lg:flex-row lg:items-center lg:space-x-1 `}
+              className={` hidden lg:flex mb-8 lg:flex-row lg:items-center lg:space-x-1 `}
             >
               <Link href="/tracks">
                 <a className="font-Inter text-base font-normal text-white opacity-60">
@@ -90,18 +52,12 @@ function QuestHero() {
               </span>
             </div>
             <h4
-              className={`${
-                scrollY >= sectionTop ? "hidden" : ""
-              } font-Inter font-medium text-xs px-4 py-1 bg-[#FFC700] w-fit rounded text-[#323232]`}
+              className={` font-Inter font-medium text-xs px-4 py-1 bg-[#FFC700] w-fit rounded text-[#323232]`}
             >
               {`${currentQuestLevel} Level`}
             </h4>
             <ReactMarkdown
-              className={`${
-                scrollY >= sectionTop
-                  ? "lg:text-xl lg:w-[53rem] line-clamp-3 lg:line-clamp-1 "
-                  : "lg:text-4xl lg:w-[44rem] line-clamp-2 lg:line-clamp-3 "
-              } font-Inter text-sm sm:text-lg tracking-tight font-bold  text-white w-56  sm:w-[30rem]   2xl:w-[62rem] `}
+              className={` font-Inter lg:text-4xl lg:w-[44rem]   text-sm sm:text-lg tracking-tight font-bold  text-white w-56  sm:w-[30rem]   2xl:w-[62rem] `}
               remarkPlugins={[remarkGfm]}
               rehypePlugins={[rehypeRaw]}
             >
@@ -109,17 +65,9 @@ function QuestHero() {
             </ReactMarkdown>
           </div>
           <div
-            className={`${
-              scrollY >= sectionTop ? "" : "   lg:top-auto  lg:-bottom-24"
-            } absolute  right-0 lg:right-0 sm:right-0  rotate-12 `}
+            className={` absolute    lg:top-auto  lg:-bottom-24 right-0 lg:right-0 sm:right-0  rotate-12 `}
           >
-            <div
-              className={`${
-                scrollY >= sectionTop
-                  ? "  lg:w-[84px] lg:h-[86px] "
-                  : " lg:w-56  lg:h-60"
-              } relative w-12 h-[50px] transition-[width] transition-[height] duration-300 `}
-            >
+            <div className={` relative  lg:w-56  lg:h-60 w-12 h-[50px]  `}>
               <Image
                 src={`/images/${currentTrackNameKey}.png`}
                 layout="fill"
@@ -130,7 +78,7 @@ function QuestHero() {
         </div>
         <button
           onClick={() => setShowMenu(true)}
-          className="absolute lg:hidden -bottom-5 right-8 bg-white text-[#7A64F6] font-Inter font-medium text-xs shadow-md shadow-[0_1px_5px_rgba(146, 163, 201, 0.57)] px-4 py-1 rounded-3xl "
+          className="absolute lg:hidden -bottom-[15%] right-8 bg-white text-[#7A64F6] font-Inter font-medium text-xs shadow-md shadow-[0_1px_5px_rgba(146, 163, 201, 0.57)] px-4 py-1 rounded-3xl "
         >
           Show quests <ChevronDownIcon className=" inline w-4 h-6" />
         </button>

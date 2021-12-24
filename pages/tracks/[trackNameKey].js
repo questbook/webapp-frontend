@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Head from "next/head";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
@@ -15,7 +15,6 @@ export default function Track({ track, trackNameKey }) {
     setcurrentTrackNameKey,
     setcurrentTrackName,
   } = useAppContext();
-  const [scrollY, setScrollY] = useState(0);
   useEffect(() => {
     const { quests, trackName, desc } = track;
     setQuests(quests);
@@ -24,20 +23,8 @@ export default function Track({ track, trackNameKey }) {
     setcurrentTrackDesc(desc);
   }, [track, trackNameKey]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    handleScroll();
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Head>
         <title>Questbook</title>
         <link rel="icon" href="/images/qb_menu_logo.svg" />
@@ -45,15 +32,13 @@ export default function Track({ track, trackNameKey }) {
       <Header />
       <TrackHero />
       <main
-        className={`${
-          scrollY > 48 ? "" : ""
-        } container my-8 px-8 lg:my-16 h-auto min-h-[60vh]  lg:flex lg:flex-row justify-between  mx-auto`}
+        className={` container my-8 px-8 lg:my-16 h-auto  lg:flex lg:flex-row justify-between  mx-auto`}
       >
         <Quests />
         <TrackHeroInfoVertical />
       </main>
-      <Footer />
-    </>
+      <Footer cname="mt-auto" />
+    </div>
   );
 }
 
