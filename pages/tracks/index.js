@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 import Header from "../../components/Header";
 import TrackListHero from "../../components/TrackListHero";
 import Footer from "../../components/Footer";
@@ -7,7 +8,7 @@ import CourseGrid from "../../components/CourseGrid";
 import { useEffect } from "react";
 import { useAppContext } from "../../context/state";
 export default function TrackList({ trackList }) {
-  console.log(trackList);
+  const router = useRouter();
   const { setTrackList } = useAppContext();
   useEffect(() => {
     setTrackList(trackList);
@@ -15,7 +16,16 @@ export default function TrackList({ trackList }) {
   return (
     <div className="min-h-screen flex flex-col">
       <Head>
-        <title>Questbook</title>
+        <title>Tracks | Questbook</title>
+        <link
+          rel="canonical"
+          href={`https://openquest.xyz${router.pathname}`}
+        />
+        <meta property="og:title" content="Tracks | Questbook Learn Web3" />
+        <meta
+          property="og:url"
+          content={`https://openquest.xyz${router.pathname}`}
+        />
         <link rel="icon" href="/images/qb_menu_logo.svg" />
       </Head>
       <Header />

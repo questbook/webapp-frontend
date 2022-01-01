@@ -7,13 +7,16 @@ import Quests from "../../components/Quests";
 import TrackHeroInfoVertical from "../../components/TrackHeroInfoVertical";
 import tracks from "../../public/data/tracks.json";
 import { useAppContext } from "../../context/state";
+import { useRouter } from "next/router";
 
 export default function Track({ track, trackNameKey }) {
+  const router = useRouter();
   const {
     setQuests,
     setcurrentTrackDesc,
     setcurrentTrackNameKey,
     setcurrentTrackName,
+    currentTrackName,
   } = useAppContext();
   useEffect(() => {
     const { quests, trackName, desc } = track;
@@ -26,7 +29,16 @@ export default function Track({ track, trackNameKey }) {
   return (
     <div className="min-h-screen flex flex-col">
       <Head>
-        <title>Questbook</title>
+        <title>{`${currentTrackName} | Questbook`}</title>
+        <link rel="canonical" href={`https://openquest.xyz${router.asPath}`} />
+        <meta
+          property="og:title"
+          content={`${currentTrackName} | Questbook Learn Web3`}
+        />
+        <meta
+          property="og:url"
+          content={`https://openquest.xyz${router.asPath}`}
+        />
         <link rel="icon" href="/images/qb_menu_logo.svg" />
       </Head>
       <Header />

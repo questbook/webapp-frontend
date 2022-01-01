@@ -19,6 +19,7 @@ export default function Quest({
   trackName,
   level,
 }) {
+  const router = useRouter();
   const {
     githubRepoUrl,
     setgithubRepoUrl,
@@ -98,7 +99,16 @@ export default function Quest({
   return (
     <div className="min-h-screen flex flex-col">
       <Head>
-        <title>Questbook</title>
+        <title>{`${questName} | Questbook`}</title>
+        <link rel="canonical" href={`https://openquest.xyz${router.asPath}`} />
+        <meta
+          property="og:title"
+          content={`${questName} | Questbook Learn Web3`}
+        />
+        <meta
+          property="og:url"
+          content={`https://openquest.xyz${router.asPath}`}
+        />
         <link rel="icon" href="/images/qb_menu_logo.svg" />
       </Head>
       <Header />
