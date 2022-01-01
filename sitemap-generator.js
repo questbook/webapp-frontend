@@ -1,4 +1,3 @@
-// import { configureSitemap } from '@sergeymyssak/nextjs-sitemap';
 const { configureSitemap } = require("@sergeymyssak/nextjs-sitemap");
 const tracks = require("./public/data/tracks.json");
 
@@ -12,12 +11,6 @@ async function fetchDynamicPaths() {
   items = [].concat.apply(items, paths);
   console.log(items);
   return items;
-}
-
-async function getDynamicPaths() {
-  const paths = await fetchDynamicPaths();
-
-  return paths.map((item) => `/tracks/${item}`);
 }
 
 fetchDynamicPaths().then((paths) => {
