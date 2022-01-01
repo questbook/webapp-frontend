@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" 
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://openquest.xyz/</loc>
+        <lastmod>2022-01-01</lastmod>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/tracks/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/tracks/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/tracks/build-on-ethereum/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/tracks/build-on-ethereum/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/tracks/build-on-solana/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/tracks/build-on-solana/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/tracks/build-on-near/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/tracks/build-on-near/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/tracks/build-on-polygon/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/tracks/build-on-polygon/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/tracks/fundamentals-of-blockchain/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/tracks/fundamentals-of-blockchain/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/building-a-bank-with-solidity-that-isnt-a-toy/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/building-a-bank-with-solidity-that-isnt-a-toy/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/getting-a-real-interest-using-compound/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/getting-a-real-interest-using-compound/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/bank-for-all-cryptocurrencies/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/bank-for-all-cryptocurrencies/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/launching-your-own-coin/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/launching-your-own-coin/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/Incentivize-people-to-own-your-coins/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/Incentivize-people-to-own-your-coins/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/Sending-notifications/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/Sending-notifications/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/Live-tracking-of-our-coin/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/Live-tracking-of-our-coin/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/Launching-your-own-NFT/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/Launching-your-own-NFT/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/Learning-Solidity-by-extending-Loot/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/Learning-Solidity-by-extending-Loot/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/Generate-passive-income-with-your-own-Arbitrage-Trading-Bot/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/Generate-passive-income-with-your-own-Arbitrage-Trading-Bot/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/Coding-the-Arbitrage-Trading-Bot/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/Coding-the-Arbitrage-Trading-Bot/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/Cloning-a-real-life-project-PoolTogether-100M-marketcap/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/Cloning-a-real-life-project-PoolTogether-100M-marketcap/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/Create-a-prize-pool-on-PoolTogether-using-builder-UI/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/Create-a-prize-pool-on-PoolTogether-using-builder-UI/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/Building-a-Russian-Roulette-dapp-on-Ethereum/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/Building-a-Russian-Roulette-dapp-on-Ethereum/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/Building-your-own-Staking-Contract/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/Building-your-own-Staking-Contract/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/create-an-airdrop-program-with-solana-web3.js/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/create-an-airdrop-program-with-solana-web3.js/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/roulette_game_in_solana/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/roulette_game_in_solana/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/solana-calculator/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/solana-calculator/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/create_crypto_with_solana_cli/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/create_crypto_with_solana_cli/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/create_candy_machine_for_minting_nft/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/create_candy_machine_for_minting_nft/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/create_nft_minting_website/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/create_nft_minting_website/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/create_crypto_with_js/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/create_crypto_with_js/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/solana-messaging-app/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/solana-messaging-app/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/create_personal_wallet/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/create_personal_wallet/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/solana-my-money/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/solana-my-money/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/staking-solana/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/staking-solana/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/create-burn-nft-solana/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/create-burn-nft-solana/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/creating-near-wallets/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/creating-near-wallets/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/coin-toss-game-near/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/coin-toss-game-near/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/Build-a-platform-for-NGOs-using-NEAR-assemblyscript/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/Build-a-platform-for-NGOs-using-NEAR-assemblyscript/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/Building-an-Auction-contract-on-NEAR-assemblyscript/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/Building-an-Auction-contract-on-NEAR-assemblyscript/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/Building-a-TicTacToe-game-on-NEAR-assemblyscript/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/Building-a-TicTacToe-game-on-NEAR-assemblyscript/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/Building-a-simple-voting-contract-on-NEAR-assemblyscript/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/Building-a-simple-voting-contract-on-NEAR-assemblyscript/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/creating-nfts-using-near-on-rust/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/creating-nfts-using-near-on-rust/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/Making-a-fully-featured-NFT-on-NEAR-in-Rust/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/Making-a-fully-featured-NFT-on-NEAR-in-Rust/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/Building-a-platform-to-help-people-launch-their-NGOs-on-Near-protocol/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/Building-a-platform-to-help-people-launch-their-NGOs-on-Near-protocol/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/polygon-loan-application/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/polygon-loan-application/" />
+    </url>
+    <url>
+        <loc>https://openquest.xyz/quest/creating-a-simple-blockchain-in-python/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://openquest.xyz/quest/creating-a-simple-blockchain-in-python/" />
+    </url>
+</urlset>

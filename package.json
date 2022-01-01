@@ -3,10 +3,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "generate-sitemap": "node sitemap-generator.js"
   },
   "dependencies": {
     "@heroicons/react": "^1.0.5",
+    "@sergeymyssak/nextjs-sitemap": "^2.0.3",
     "@tailwindcss/line-clamp": "^0.3.0",
     "axios": "^0.24.0",
     "github-markdown-css": "^5.1.0",
