@@ -10,7 +10,7 @@ import SubquestNav from "../../components/SubquestNav";
 import { ArrowRightIcon } from "@heroicons/react/solid";
 import { useAppContext } from "../../context/state";
 import axios from "axios";
-import tracks from "../../public/data/tracks.json";
+// import tracks from "../../public/data/tracks.json";
 export default function Quest({
   data,
   github_url,
@@ -150,20 +150,9 @@ export default function Quest({
   );
 }
 
-export async function getStaticPaths() {
-  let paths = Object.values(tracks).map((track) =>
-    track?.quests.map((quest) => ({
-      params: { questNameSlug: quest?.slug },
-    }))
-  );
-  paths = [].concat.apply([], paths);
-  return {
-    paths,
-    fallback: false,
-  };
-}
-
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
+  let tracks = await fetch("http://localhost:3000/api/data");
+  tracks = await tracks.json();
   const { questNameSlug } = context.params;
   let res, quest, trackNameKey;
 
