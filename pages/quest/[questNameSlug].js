@@ -10,6 +10,7 @@ import SubquestNav from "../../components/SubquestNav";
 import { ArrowRightIcon } from "@heroicons/react/solid";
 import { useAppContext } from "../../context/state";
 import axios from "axios";
+import { sendAmplitudeData } from "../../lib/amplitude";
 // import tracks from "../../public/data/tracks.json";
 export default function Quest({
   data,
@@ -136,6 +137,12 @@ export default function Quest({
           This quest is open-source. If you find any issues and want to improve
           the content or contribute in any way, please{" "}
           <a
+            onClick={() =>
+              sendAmplitudeData("github_repo_visited", {
+                repoUrl: githubRepoUrl,
+                questName: questName,
+              })
+            }
             href={githubRepoUrl}
             className="text-[#8BE3FF] underline"
             target="_blank"

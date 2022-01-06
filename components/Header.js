@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { MenuIcon, XIcon } from "@heroicons/react/solid";
+import { sendAmplitudeData } from "../lib/amplitude";
 
 function Header() {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -20,11 +21,21 @@ function Header() {
     >
       <Link href="/tracks">
         <li className="font-Inter cursor-pointer text-xl whitespace-nowrap">
-          <a>Explore Tracks</a>
+          <a
+            onClick={() =>
+              sendAmplitudeData("explore_tracks_button_header_clicked")
+            }
+          >
+            Explore Tracks
+          </a>
         </li>
       </Link>
       <li className="font-Inter text-xl whitespace-nowrap">
-        <a href="https://discord.gg/tWg7Mb7KM7" target="_blank">
+        <a
+          onClick={() => sendAmplitudeData("discord_button_header_clicked")}
+          href="https://discord.gg/tWg7Mb7KM7"
+          target="_blank"
+        >
           Discord
         </a>
       </li>

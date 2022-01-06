@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { sendAmplitudeData } from "../lib/amplitude";
 
 function CourseCard({ text, subtext, imgSrc, dimensions, url }) {
   return (
@@ -34,7 +35,14 @@ function CourseCard({ text, subtext, imgSrc, dimensions, url }) {
       </div>
       <div className="basis-1/4 flex  items-center content-center">
         <Link href={url}>
-          <button className="bg-[#7A64F6] rounded  w-28 h-9 text-white font-Inter font-medium shadow-[0_1px_9px_rgba(71, 114, 138, 0.13)]">
+          <button
+            onClick={() =>
+              sendAmplitudeData("track_card_learn_button_clicked", {
+                trackName: text ? `${text} ${subtext}` : subtext,
+              })
+            }
+            className="bg-[#7A64F6] rounded  w-28 h-9 text-white font-Inter font-medium shadow-[0_1px_9px_rgba(71, 114, 138, 0.13)]"
+          >
             Learn
           </button>
         </Link>

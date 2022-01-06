@@ -1,6 +1,7 @@
 import Link from "next/link";
 import CourseCard from "./CourseCard";
 import { ArrowRightIcon } from "@heroicons/react/solid";
+import { sendAmplitudeData } from "../lib/amplitude";
 
 function CourseCards() {
   return (
@@ -9,7 +10,12 @@ function CourseCards() {
     >
       <div className="py-3  ">
         <Link href="/tracks">
-          <h3 className=" cursor-pointer w-fit mx-auto lg:ml-0  group hover:underline text-center text-white font-Inter text-2xl">
+          <h3
+            onClick={() =>
+              sendAmplitudeData("explore_all_tracks_button_hero_clicked")
+            }
+            className=" cursor-pointer w-fit mx-auto lg:ml-0  group hover:underline text-center text-white font-Inter text-2xl"
+          >
             Explore all Tracks
             <ArrowRightIcon className="inline ml-2 my-auto group-hover:scale-150 group-hover:scale-y-[2] transition-transform duration-300 ease-linear origin-left text-white w-5 h-5" />
           </h3>
