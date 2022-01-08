@@ -297,6 +297,20 @@
         "github_url": "https://raw.githubusercontent.com/CreatorOS/polygon-loan-application/main",
         "level": "Beginner",
         "desc": "In this quest you will learn all about the basics of developing DeFi applications on Polygon."
+      },
+      {
+        "slug": "polygon-multisig",
+        "questName": "Coding your own MultiSig wallet on Polygon",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/polygon-multisig/master",
+        "level": "Beginner",
+        "desc": "In this quest, we will build a 2-of-2 multi-signature wallet using Solidity on polygon."
+      },
+      {
+        "slug": "polygon-reentrancy-hack",
+        "questName": "Draining smart contracts with reentrancy",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/polygon-reentrancy-hack/master",
+        "level": "Beginner",
+        "desc": "In this quest, you will learn how to steal MATICs from a contract’s balance using reentrancy."
       }
     ]
   },
