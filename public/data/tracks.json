@@ -282,11 +282,39 @@
     "desc": "Polygon is a protocol and a framework for building and connecting Ethereum-compatible blockchain networks. Aggregating scalable solutions on Ethereum supporting a multi-chain Ethereum ecosystem.",
     "quests": [
       {
+        "slug": "polygon-simple-storage",
+        "questName": "Smart contracts on Polygon - how exactly this can be done?",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/polygon-simple-storage/master",
+        "level": "Beginner",
+        "desc": "In this quest you will learn how to write, deploy, and interact with smart contracts on the Polygon blockchain."
+      },
+      {
+        "slug": "polygon-fungible-token",
+        "questName": "Connecting to Polygon with ethers.js and react.js",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/polygon-fungible-token/master",
+        "level": "Beginner",
+        "desc": "In this quest, we will learn how to build an interface that does stuff on Polygon. We will deploy a fungible token contract on Mumbai and play around with it using a react page."
+      },
+      {
         "slug": "polygon-loan-application",
         "questName": "Building a small loan application on polygon",
         "github_url": "https://raw.githubusercontent.com/CreatorOS/polygon-loan-application/main",
         "level": "Beginner",
         "desc": "In this quest you will learn all about the basics of developing DeFi applications on Polygon."
+      },
+      {
+        "slug": "polygon-multisig",
+        "questName": "Coding your own MultiSig wallet on Polygon",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/polygon-multisig/master",
+        "level": "Beginner",
+        "desc": "In this quest, we will build a 2-of-2 multi-signature wallet using Solidity on polygon."
+      },
+      {
+        "slug": "polygon-reentrancy-hack",
+        "questName": "Draining smart contracts with reentrancy",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/polygon-reentrancy-hack/master",
+        "level": "Beginner",
+        "desc": "In this quest, you will learn how to steal MATICs from a contract’s balance using reentrancy."
       }
     ]
   },

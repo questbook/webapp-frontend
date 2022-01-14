@@ -1,10 +1,18 @@
 import Link from "next/link";
+import { sendAmplitudeData } from "../lib/amplitude";
 
 function QuestCard({ quest }) {
   return (
     <div>
       <Link href={`/quest/${quest?.slug}`}>
-        <a className="cursor-pointer">
+        <a
+          onClick={() =>
+            sendAmplitudeData("quest_card_clicked", {
+              questName: quest?.questName,
+            })
+          }
+          className="cursor-pointer"
+        >
           <h3 className="font-Inter font-semibold leading-6 text-lg">
             {quest?.questName}
           </h3>

@@ -5,7 +5,7 @@ import Header from '../../components/Header';
 import TrackHero from '../../components/TrackHero';
 import Quests from '../../components/Quests';
 import TrackHeroInfoVertical from '../../components/TrackHeroInfoVertical';
-import tracks from '../../public/data/tracks.json';
+// import tracks from "../../public/data/tracks.json";
 import { useAppContext } from '../../context/state';
 import { useRouter } from 'next/router';
 
@@ -58,17 +58,9 @@ export default function Track({ track, trackNameKey }) {
   );
 }
 
-export async function getStaticPaths() {
-  const paths = Object.keys(tracks).map((trackNameKey) => ({
-    params: { trackNameKey },
-  }));
-  return {
-    paths,
-    fallback: false,
-  };
-}
-
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
+  let tracks = await fetch('http://localhost:3000/api/data');
+  tracks = await tracks.json();
   const { trackNameKey } = params;
 
   if (!trackNameKey && !tracks[trackNameKey]) {
