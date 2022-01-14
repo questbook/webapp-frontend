@@ -21,6 +21,7 @@ export function AppWrapper({ children }) {
   const [currentSubQuest, setCurrentSubQuest] = useState(0);
 
   const [trackList, setTrackList] = useState([]);
+  const [mintingSuccess, setMintingSuccess] = useState(false);
   useEffect(() => {
     if (window.outerWidth >= 1024) setShowMenu(true);
   }, []);
@@ -58,6 +59,8 @@ export function AppWrapper({ children }) {
         setcurrentQuestLevel,
         trackList,
         setTrackList,
+        mintingSuccess,
+        setMintingSuccess,
       }}
     >
       {children}

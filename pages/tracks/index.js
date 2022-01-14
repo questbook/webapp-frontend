@@ -1,12 +1,12 @@
-import Head from "next/head";
-import { useRouter } from "next/router";
-import Header from "../../components/Header";
-import TrackListHero from "../../components/TrackListHero";
-import Footer from "../../components/Footer";
-import tracks from "../../public/data/tracks.json";
-import CourseGrid from "../../components/CourseGrid";
-import { useEffect } from "react";
-import { useAppContext } from "../../context/state";
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import Header from '../../components/Header';
+import TrackListHero from '../../components/TrackListHero';
+import Footer from '../../components/Footer';
+import tracks from '../../public/data/tracks.json';
+import CourseGrid from '../../components/CourseGrid';
+import { useEffect } from 'react';
+import { useAppContext } from '../../context/state';
 export default function TrackList({ trackList }) {
   const router = useRouter();
   const { setTrackList } = useAppContext();
@@ -26,6 +26,7 @@ export default function TrackList({ trackList }) {
           property="og:url"
           content={`https://openquest.xyz${router.pathname}`}
         />
+        <meta name="twitter:title" content="Questbook Learn Web3" />
         <link rel="icon" href="/images/qb_menu_logo.svg" />
       </Head>
       <Header />

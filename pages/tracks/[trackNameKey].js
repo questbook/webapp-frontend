@@ -1,13 +1,13 @@
-import { useEffect } from "react";
-import Head from "next/head";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
-import TrackHero from "../../components/TrackHero";
-import Quests from "../../components/Quests";
-import TrackHeroInfoVertical from "../../components/TrackHeroInfoVertical";
-import tracks from "../../public/data/tracks.json";
-import { useAppContext } from "../../context/state";
-import { useRouter } from "next/router";
+import { useEffect } from 'react';
+import Head from 'next/head';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
+import TrackHero from '../../components/TrackHero';
+import Quests from '../../components/Quests';
+import TrackHeroInfoVertical from '../../components/TrackHeroInfoVertical';
+import tracks from '../../public/data/tracks.json';
+import { useAppContext } from '../../context/state';
+import { useRouter } from 'next/router';
 
 export default function Track({ track, trackNameKey }) {
   const router = useRouter();
@@ -33,6 +33,10 @@ export default function Track({ track, trackNameKey }) {
         <link rel="canonical" href={`https://openquest.xyz${router.asPath}`} />
         <meta
           property="og:title"
+          content={`${currentTrackName} | Questbook Learn Web3`}
+        />
+        <meta
+          property="twitter:title"
           content={`${currentTrackName} | Questbook Learn Web3`}
         />
         <meta

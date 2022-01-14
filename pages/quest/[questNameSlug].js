@@ -1,16 +1,19 @@
-import { useState, useEffect } from "react";
-import Head from "next/head";
-import { useRouter } from "next/router";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
-import QuestHero from "../../components/QuestHero";
-import SubquestContent from "../../components/SubquestContent";
-import SubquestMenu from "../../components/SubquestMenu";
-import SubquestNav from "../../components/SubquestNav";
-import { ArrowRightIcon } from "@heroicons/react/solid";
-import { useAppContext } from "../../context/state";
-import axios from "axios";
-import tracks from "../../public/data/tracks.json";
+import { useState, useEffect } from 'react';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
+import QuestHero from '../../components/QuestHero';
+import SubquestContent from '../../components/SubquestContent';
+import SubquestMenu from '../../components/SubquestMenu';
+import SubquestNav from '../../components/SubquestNav';
+import { ArrowRightIcon } from '@heroicons/react/solid';
+import { useAppContext } from '../../context/state';
+import axios from 'axios';
+import tracks from '../../public/data/tracks.json';
+import NftClaimModal from '../../components/NftClaimModal';
+import WaitingModal from '../../components/WaitingModal';
+import SuccessModal from '../../components/SuccessModal';
 export default function Quest({
   data,
   github_url,
@@ -20,6 +23,8 @@ export default function Quest({
   level,
 }) {
   const router = useRouter();
+  const [showNftClaimModal, setShowNftClaimModal] = useState(false);
+  const [showWaitingModal, setShowWaitingModal] = useState(false);
   const {
     githubRepoUrl,
     setgithubRepoUrl,
@@ -37,6 +42,8 @@ export default function Quest({
     setcurrentTrackName,
     setcurrentQuestLevel,
     setCurrentSubQuest,
+    currentSubQuest,
+    currentTrackNameKey,
   } = useAppContext();
 
   const { showMenu, setShowMenu } = useAppContext();
@@ -60,8 +67,8 @@ export default function Quest({
     if (github_url && data) {
       const baseRepoUrl = github_url;
       setgithubRepoUrl(
-        `https://github.com/${github_url.split("/")[3]}/${
-          github_url.split("/")[4]
+        `https://github.com/${github_url.split('/')[3]}/${
+          github_url.split('/')[4]
         }`
       );
       const fullquestMd = data.replaceAll(
@@ -73,10 +80,10 @@ export default function Quest({
       let subquestTitlesMd = [];
       let subQuestContentMd = [];
 
-      fullquestMd.split("\n").map((line, index) => {
-        if (line.startsWith("# ")) {
+      fullquestMd.split('\n').map((line, index) => {
+        if (line.startsWith('# ')) {
           questTitleMd.push(line);
-        } else if (line.startsWith("## ")) {
+        } else if (line.startsWith('## ')) {
           subquestTitlesMd.push(line);
         } else if (subquestTitlesMd.length === 0 && questTitleMd.length > 0) {
           questDetailsMd.push(line);
@@ -84,14 +91,17 @@ export default function Quest({
           subQuestContentMd[subquestTitlesMd.length - 1] = `${
             subQuestContentMd[subquestTitlesMd.length - 1]
               ? `${subQuestContentMd[subquestTitlesMd.length - 1]}\n`
-              : ""
+              : ''
           }${line}`;
         }
       });
-      subquestTitlesMd.unshift("## Introduction");
-      subQuestContentMd.unshift(questDetailsMd.join("\n"));
+      subquestTitlesMd.unshift('## Introduction');
+      subQuestContentMd.unshift(questDetailsMd.join('\n'));
+      console.log(currentTrackNameKey);
+      if (currentTrackNameKey === 'build-on-polygon')
+        subquestTitlesMd.push('## Claim your NFT');
       setquestTitle(questTitleMd[0]);
-      setquestDetails(questDetailsMd.join("\n"));
+      setquestDetails(questDetailsMd.join('\n'));
       setsubquestTitles(subquestTitlesMd);
       setsubQuestContent(subQuestContentMd);
     }
@@ -106,6 +116,10 @@ export default function Quest({
           content={`${questName} | Questbook Learn Web3`}
         />
         <meta
+          property="twitter:title"
+          content={`${questName} | Questbook Learn Web3`}
+        />
+        <meta
           property="og:url"
           content={`https://openquest.xyz${router.asPath}`}
         />
@@ -113,13 +127,23 @@ export default function Quest({
       </Head>
       <Header />
       <QuestHero />
+      <NftClaimModal
+        showNftClaimModal={showNftClaimModal}
+        setShowNftClaimModal={setShowNftClaimModal}
+        setShowWaitingModal={setShowWaitingModal}
+      />
+      <WaitingModal
+        showWaitingModal={showWaitingModal}
+        setShowWaitingModal={setShowWaitingModal}
+      />
+      <SuccessModal />
       <main className="container mx-auto px-8 flex flex-row h-auto  lg:mt-16 mb-8">
         <SubquestMenu />
         <div className="flex flex-col mx-auto  w-full overflow-auto">
           <button
             onClick={() => setShowMenu(true)}
             className={`${
-              showMenu ? "lg:hidden" : "lg:flex w-fit"
+              showMenu ? 'lg:hidden' : 'lg:flex w-fit'
             } hidden items-center space-x-2 mb-2`}
           >
             <span className="font-Inter font-bold text-base text-[#7A64F6]">
@@ -128,20 +152,36 @@ export default function Quest({
             <ArrowRightIcon className=" w-4 h-6 inline text-[#7A64F6]" />
           </button>
           <SubquestContent />
+          <p
+            className={`${
+              currentSubQuest === subquestTitles.length - 1 &&
+              currentTrackNameKey === 'build-on-polygon'
+                ? ''
+                : 'hidden'
+            } font-Inter font-bold leading-7 text-base text-black pb-10 `}
+          >
+            Did you complete this quest? Every win counts.{' '}
+            <a
+              className="text-[#7561EB] cursor-pointer"
+              onClick={() => setShowNftClaimModal(true)}
+            >
+              <span>Earn your NFT.</span>
+            </a>
+          </p>
           <SubquestNav />
         </div>
       </main>
       <div className=" w-full p-3 mt-auto text-center bg-[#85A1BA]">
         <p className="font-Inter font-normal text-base text-white ">
           This quest is open-source. If you find any issues and want to improve
-          the content or contribute in any way, please{" "}
+          the content or contribute in any way, please{' '}
           <a
             href={githubRepoUrl}
             className="text-[#8BE3FF] underline"
             target="_blank"
           >
             <span>fork this repo</span>
-          </a>{" "}
+          </a>{' '}
           and raise a PR. We appreciate it. :)
         </p>
       </div>
@@ -180,7 +220,7 @@ export async function getStaticProps(context) {
   if (!github_url) {
     return {
       redirect: {
-        destination: "/",
+        destination: '/',
         permanent: false,
       },
     };
@@ -190,7 +230,7 @@ export async function getStaticProps(context) {
   } catch (error) {
     return {
       redirect: {
-        destination: "/",
+        destination: '/',
         permanent: false,
       },
     };
@@ -198,7 +238,7 @@ export async function getStaticProps(context) {
   if (!res.data) {
     return {
       redirect: {
-        destination: "/",
+        destination: '/',
         permanent: false,
       },
     };

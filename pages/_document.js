@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 class MyDocument extends Document {
   render() {
@@ -41,7 +41,6 @@ Get started with Web 3.0 along with 10,000+developers who are building on Web 3.
           <meta property="og:site_name" content="Questbook Learn Web3" />
           <meta property="og:type" content="website" />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Questbook Learn Web3" />
           <meta
             name="twitter:description"
             content="Questbook is a Decentralized University​ where learning is always free.
