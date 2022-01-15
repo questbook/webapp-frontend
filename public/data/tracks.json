@@ -293,7 +293,7 @@
       },
       {
         "slug": "polygon-loan-application",
-        "questName": "Building a small loan application on polygon",
+        "questName": "Creating a Polygon loan application with hardhat",
         "github_url": "https://raw.githubusercontent.com/CreatorOS/polygon-loan-application/main",
         "level": "Beginner",
         "desc": "In this quest you will learn all about the basics of developing DeFi applications on Polygon."
