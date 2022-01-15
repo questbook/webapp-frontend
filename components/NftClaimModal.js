@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Fragment, useRef, useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { Dialog, Transition } from '@headlessui/react';
-import axios from 'axios';
+import axios from '../lib/axios';
 import { useAppContext } from '../context/state';
 import tracks from '../public/data/tracks.json';
 
@@ -12,8 +12,13 @@ function NftClaimModal({
   setShowNftClaimModal,
   setShowWaitingModal,
 }) {
-  const { setMintingSuccess, currentTrackNameKey, currentQuestName } =
-    useAppContext();
+  const {
+    setMintingSuccess,
+    currentTrackNameKey,
+    currentQuestName,
+    currentQuestDesc,
+    setTransactionDetails,
+  } = useAppContext();
   const addressInputRef = useRef(null);
   const [address, setAddress] = useState('');
   const [tweetClicked, setTweetClicked] = useState(false);
@@ -35,21 +40,20 @@ function NftClaimModal({
         setMinting(true);
         setShowWaitingModal(true);
         setShowNftClaimModal(false);
-        const res = await axios.post(
-          `http://localhost:3001/mint/${track.toLowerCase()}`,
-          {
-            quest: currentQuestName,
-            track: track,
-            address,
-            tweetUrl,
-          }
-        );
+        const res = await axios.post(`/mint/${track.toLowerCase()}`, {
+          quest: currentQuestName,
+          track: track,
+          questDesc: currentQuestDesc,
+          address,
+          tweetUrl,
+        });
         if (res) {
           console.log(res);
           setMinting(false);
           setShowNftClaimModal(false);
           setShowWaitingModal(false);
           setMintingSuccess(true);
+          setTransactionDetails(res.data.resp);
         } else {
           setMinting(false);
           setShowNftClaimModal(false);

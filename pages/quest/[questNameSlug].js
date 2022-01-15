@@ -22,6 +22,7 @@ export default function Quest({
   trackNameKey,
   trackName,
   level,
+  desc,
 }) {
   const router = useRouter();
   const [showNftClaimModal, setShowNftClaimModal] = useState(false);
@@ -42,6 +43,7 @@ export default function Quest({
     setcurrentTrackNameKey,
     setcurrentTrackName,
     setcurrentQuestLevel,
+    setcurrentQuestDesc,
     setCurrentSubQuest,
     currentSubQuest,
     currentTrackNameKey,
@@ -55,8 +57,9 @@ export default function Quest({
     setcurrentTrackNameKey(trackNameKey);
     setcurrentTrackName(trackName);
     setcurrentQuestLevel(level);
+    setcurrentQuestDesc(desc);
     setCurrentSubQuest(0);
-  }, [github_url, questName, trackNameKey, trackName, level]);
+  }, [github_url, questName, trackNameKey, trackName, level, desc]);
 
   useEffect(() => {
     if (window.outerWidth >= 1024) {
@@ -98,8 +101,8 @@ export default function Quest({
       });
       subquestTitlesMd.unshift('## Introduction');
       subQuestContentMd.unshift(questDetailsMd.join('\n'));
-      console.log(currentTrackNameKey);
-      if (currentTrackNameKey === 'build-on-polygon')
+      console.log(trackNameKey);
+      if (trackNameKey === 'build-on-polygon')
         subquestTitlesMd.push('## Claim your NFT');
       setquestTitle(questTitleMd[0]);
       setquestDetails(questDetailsMd.join('\n'));
@@ -210,7 +213,7 @@ export async function getServerSideProps(context) {
       return true;
     }
   });
-  const { questName, github_url, level } = quest;
+  const { questName, github_url, level, desc } = quest;
   const { trackName } = tracks[trackNameKey];
   const baseRepoUrl = github_url;
   if (!github_url) {
@@ -247,6 +250,7 @@ export async function getServerSideProps(context) {
       trackNameKey,
       trackName,
       level,
+      desc,
     },
   };
 }

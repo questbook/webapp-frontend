@@ -4,7 +4,8 @@ import { Dialog, Transition } from '@headlessui/react';
 import { useAppContext } from '../context/state';
 
 function SuccessModal() {
-  const { mintingSuccess, setMintingSuccess } = useAppContext();
+  const { mintingSuccess, setMintingSuccess, transactionDetails } =
+    useAppContext();
   return (
     <Transition.Root show={mintingSuccess} as={Fragment}>
       <Dialog
@@ -58,6 +59,25 @@ function SuccessModal() {
                 <p className="font-Inter font-semibold text-2xl leading-8">
                   Yay! You just received your NFT for completing this quest.
                 </p>
+                <div className="mt-5 text-center px-2">
+                  <p className="font-Inter font-bold text-base mb-2 text-[#1C2833]">
+                    Quest Completion NFT
+                  </p>
+                  <div className="p-3 bg-[#F2F2F2] rounded">
+                    <a
+                      className="font-Inter font-bold text-base cursor-pointer  text-[#7A64F6]"
+                      href={`https://opensea.io/assets/${
+                        transactionDetails?.to
+                      }/${parseInt(
+                        transactionDetails?.events[0]?.args[2]?.hex,
+                        16
+                      )}`}
+                      target="_blank"
+                    >
+                      Check NFT on Opensea
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </Transition.Child>
