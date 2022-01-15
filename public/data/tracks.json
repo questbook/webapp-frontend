@@ -1,6 +1,7 @@
 {
   "build-on-ethereum": {
     "trackName": "Build on Ethereum",
+    "protocol": "Ethereum",
     "cardThumbnail": "eth.png",
     "desc": "Most of the smart contract for Ethereum are written in Solidity. To do this track, it's helpful to have atleast some basic knowledge of programming fundamentals and any other language like Python or Javascript.",
     "quests": [
@@ -113,6 +114,7 @@
   },
   "build-on-solana": {
     "trackName": "Build on Solana",
+    "protocol": "Solana",
     "cardThumbnail": "solana.png",
     "desc": "Solana is the arguably the second most popular blockchain. The programs in Solana are written in Rust.",
     "quests": [
@@ -204,6 +206,7 @@
   },
   "build-on-near": {
     "trackName": "Build on NEAR",
+    "protocol": "NEAR",
     "cardThumbnail": "near.png",
     "desc": "NEAR Protocol is a decentralized application (dApp) platform that focuses on developer and user-friendliness. Near supports multiple programming languages including Rust, AssemblyScript and Solidity.",
     "quests": [
@@ -274,6 +277,7 @@
   },
   "build-on-polygon": {
     "trackName": "Build on Polygon",
+    "protocol": "Polygon",
     "cardThumbnail": "build-on-polygon.png",
     "desc": "Polygon is a protocol and a framework for building and connecting Ethereum-compatible blockchain networks. Aggregating scalable solutions on Ethereum supporting a multi-chain Ethereum ecosystem.",
     "quests": [
@@ -316,6 +320,7 @@
   },
   "fundamentals-of-blockchain": {
     "trackName": "Fundamentals of Blockchain",
+    "protocol": "Blockchain",
     "cardThumbnail": "bc.png",
     "desc": "",
     "quests": [

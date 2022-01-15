@@ -7,11 +7,14 @@
     "generate-sitemap": "node sitemap-generator.js"
   },
   "dependencies": {
+    "@headlessui/react": "^1.4.2",
     "@heroicons/react": "^1.0.5",
     "@sergeymyssak/nextjs-sitemap": "^2.0.3",
+    "@tailwindcss/forms": "^0.4.0",
     "@tailwindcss/line-clamp": "^0.3.0",
     "amplitude-js": "^8.14.1",
     "axios": "^0.24.0",
+    "bn.js": "^5.2.0",
     "github-markdown-css": "^5.1.0",
     "next": "latest",
     "react": "^17.0.2",

@@ -1,13 +1,13 @@
-import { useEffect } from "react";
-import Head from "next/head";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
-import TrackHero from "../../components/TrackHero";
-import Quests from "../../components/Quests";
-import TrackHeroInfoVertical from "../../components/TrackHeroInfoVertical";
+import { useEffect } from 'react';
+import Head from 'next/head';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
+import TrackHero from '../../components/TrackHero';
+import Quests from '../../components/Quests';
+import TrackHeroInfoVertical from '../../components/TrackHeroInfoVertical';
 // import tracks from "../../public/data/tracks.json";
-import { useAppContext } from "../../context/state";
-import { useRouter } from "next/router";
+import { useAppContext } from '../../context/state';
+import { useRouter } from 'next/router';
 
 export default function Track({ track, trackNameKey }) {
   const router = useRouter();
@@ -36,6 +36,10 @@ export default function Track({ track, trackNameKey }) {
           content={`${currentTrackName} | Questbook Learn Web3`}
         />
         <meta
+          property="twitter:title"
+          content={`${currentTrackName} | Questbook Learn Web3`}
+        />
+        <meta
           property="og:url"
           content={`https://openquest.xyz${router.asPath}`}
         />
@@ -55,7 +59,7 @@ export default function Track({ track, trackNameKey }) {
 }
 
 export async function getServerSideProps({ params }) {
-  let tracks = await fetch("http://localhost:3000/api/data");
+  let tracks = await fetch('http://localhost:3000/api/data');
   tracks = await tracks.json();
   const { trackNameKey } = params;
 
