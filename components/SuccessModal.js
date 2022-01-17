@@ -66,7 +66,7 @@ function SuccessModal() {
                   <div className="p-3 bg-[#F2F2F2] rounded">
                     <a
                       className="font-Inter font-bold text-base cursor-pointer  text-[#7A64F6]"
-                      href={`https://opensea.io/assets/${
+                      href={`https://opensea.io/assets/matic/${
                         transactionDetails?.to
                       }/${parseInt(
                         transactionDetails?.events[0]?.args[2]?.hex,

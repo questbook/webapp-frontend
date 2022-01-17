@@ -315,6 +315,41 @@
         "github_url": "https://raw.githubusercontent.com/CreatorOS/polygon-reentrancy-hack/master",
         "level": "Beginner",
         "desc": "In this quest, you will learn how to steal MATICs from a contract’s balance using reentrancy."
+      },
+      {
+        "slug": "polygon-phishing-hack",
+        "questName": "Phishing with tx.origin",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/polygon-phishing-hack/master",
+        "level": "Beginner",
+        "desc": "In this quest, you will learn how to do phishing with tx.origin."
+      },
+      {
+        "slug": "polygon-DOS-hack",
+        "questName": "Freezing contracts with DOS attacks",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/polygon-DOS-hack/master",
+        "level": "Beginner",
+        "desc": "In this quest, you will learn about the three most common types of Denial Of Service attacks in Solidity."
+      },
+      {
+        "slug": "polygon-randomness-hack",
+        "questName": "Exploiting random numbers generators",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/polygon-randomness-hack/master",
+        "level": "Beginner",
+        "desc": "In this quest, we will look at a common vulnerability when trying to achieve randomness in solidity."
+      },
+      {
+        "slug": "polygon-selfdestruct-hack",
+        "questName": "Exploiting selfdestruct()",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/polygon-selfdestruct-hack/master",
+        "level": "Beginner",
+        "desc": "In this quest, you will learn about the selfdestruct function in Solidity and how it can be used to hack contracts that follow a specific pattern."
+      },
+      {
+        "slug": "starting-with-polygon-nfts",
+        "questName": "Starting with Polygon NFTs",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/starting-with-polygon-nfts/master",
+        "level": "Beginner",
+        "desc": "In this quest, we will be looking at how to code and deploy NFTs to Polygon's Mumbai."
       }
     ]
   },
