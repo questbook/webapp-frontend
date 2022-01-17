@@ -1,7 +1,7 @@
-import Link from "next/link";
-import CourseCard from "./CourseCard";
-import { ArrowRightIcon } from "@heroicons/react/solid";
-import { sendAmplitudeData } from "../lib/amplitude";
+import Link from 'next/link';
+import CourseCard from './CourseCard';
+import { ArrowRightIcon } from '@heroicons/react/solid';
+import { sendAmplitudeData } from '../lib/amplitude';
 
 function CourseCards() {
   return (
@@ -12,7 +12,7 @@ function CourseCards() {
         <Link href="/tracks">
           <h3
             onClick={() =>
-              sendAmplitudeData("explore_all_tracks_button_hero_clicked")
+              sendAmplitudeData('explore_all_tracks_button_hero_clicked')
             }
             className=" cursor-pointer w-fit mx-auto lg:ml-0  group hover:underline text-center text-white font-Inter text-2xl"
           >
@@ -23,32 +23,32 @@ function CourseCards() {
       </div>
       <div className="flex  flex-wrap justify-center  sm:justify-between  gap-x-1 gap-y-6 ">
         <CourseCard
-          text={"Build on"}
-          subtext={"Ethereum"}
-          imgSrc={"/images/eth.png"}
+          text={'Build on'}
+          subtext={'Ethereum'}
+          imgSrc={'/images/eth.png'}
           dimensions={[51, 85]}
-          url={"/tracks/build-on-ethereum"}
+          url={'/tracks/build-on-ethereum'}
         />
         <CourseCard
-          text={"Build on"}
-          subtext={"Solana"}
-          imgSrc={"/images/solana.png"}
+          text={'Build on'}
+          subtext={'Solana'}
+          imgSrc={'/images/solana.png'}
           dimensions={[84, 85]}
-          url={"/tracks/build-on-solana"}
+          url={'/tracks/build-on-solana'}
         />
         <CourseCard
-          text={"Build on"}
-          subtext={"NEAR"}
-          imgSrc={"/images/near.png"}
+          text={'Build on'}
+          subtext={'NEAR'}
+          imgSrc={'/images/near.png'}
           dimensions={[98, 82]}
-          url={"/tracks/build-on-near"}
+          url={'/tracks/build-on-near'}
         />
         <CourseCard
-          text={"Build on"}
-          subtext={"Polygon"}
-          imgSrc={"/images/build-on-polygon.png"}
+          text={'Build on'}
+          subtext={'Polygon'}
+          imgSrc={'/images/build-on-polygon.png'}
           dimensions={[99, 90]}
-          url={"/tracks/build-on-polygon"}
+          url={'/tracks/build-on-polygon'}
         />
       </div>
     </div>

@@ -1,12 +1,12 @@
-import Image from "next/image";
-import Link from "next/link";
-import { sendAmplitudeData } from "../lib/amplitude";
+import Image from 'next/image';
+import Link from 'next/link';
+import { sendAmplitudeData } from '../lib/amplitude';
 
 function CourseCard({ text, subtext, imgSrc, dimensions, url }) {
   return (
     <div
       className={`${
-        text === undefined ? "mx-auto" : ""
+        text === undefined ? 'mx-auto' : ''
       } flex flex-col items-center justify-center w-40  xl:w-72 h-72  xl:h-96 rounded-xl bg-gradient-to-t from-[#FEFEFE] to-[#F1F2FF]  shadow-[0_13px_22px_rgba(73,83,179,0.19)]`}
     >
       <div className="basis-2/4 flex flex-col justify-end pb-8 ">
@@ -26,8 +26,8 @@ function CourseCard({ text, subtext, imgSrc, dimensions, url }) {
         <h4
           className={`${
             text === undefined
-              ? "text-xl xl:text-2xl px-4"
-              : "text-2xl xl:text-3xl"
+              ? 'text-xl xl:text-2xl px-4'
+              : 'text-2xl xl:text-3xl'
           } text-center text-black  font-Inter font-medium`}
         >
           {subtext}
@@ -37,7 +37,7 @@ function CourseCard({ text, subtext, imgSrc, dimensions, url }) {
         <Link href={url}>
           <button
             onClick={() =>
-              sendAmplitudeData("track_card_learn_button_clicked", {
+              sendAmplitudeData('track_card_learn_button_clicked', {
                 trackName: text ? `${text} ${subtext}` : subtext,
               })
             }
