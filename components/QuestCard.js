@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { sendAmplitudeData } from "../lib/amplitude";
+import Link from 'next/link';
+import { sendAmplitudeData } from '../lib/amplitude';
 
 function QuestCard({ quest }) {
   return (
@@ -7,7 +7,7 @@ function QuestCard({ quest }) {
       <Link href={`/quest/${quest?.slug}`}>
         <a
           onClick={() =>
-            sendAmplitudeData("quest_card_clicked", {
+            sendAmplitudeData('quest_card_clicked', {
               questName: quest?.questName,
             })
           }

@@ -6,6 +6,7 @@ import { Dialog, Transition } from '@headlessui/react';
 import axios from '../lib/axios';
 import { useAppContext } from '../context/state';
 import tracks from '../public/data/tracks.json';
+import { sendAmplitudeData } from '../lib/amplitude';
 
 function NftClaimModal({
   showNftClaimModal,
@@ -53,7 +54,15 @@ function NftClaimModal({
           setShowNftClaimModal(false);
           setShowWaitingModal(false);
           setMintingSuccess(true);
-          setTransactionDetails(res.data.resp);
+          setTransactionDetails(res?.data?.resp);
+          setTweetUrl('');
+          setAddress('');
+          setLearning('');
+          sendAmplitudeData('NFT_claimed', {
+            address: res?.data?.resp?.events[0]?.args[1],
+            track: track,
+            quest: currentQuestName,
+          });
         } else {
           setMinting(false);
           setShowNftClaimModal(false);
