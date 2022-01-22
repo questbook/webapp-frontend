@@ -1,11 +1,11 @@
-import Head from "next/head";
-import { useRouter } from "next/router";
-import CommunitySection from "../components/CommunitySection";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import Hero from "../components/Hero";
-import MobileSection from "../components/MobileSection";
-import PartnersSection from "../components/PartnersSection";
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import CommunitySection from '../components/CommunitySection';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+import Hero from '../components/Hero';
+import MobileSection from '../components/MobileSection';
+import PartnersSection from '../components/PartnersSection';
 
 export default function Home() {
   const router = useRouter();
