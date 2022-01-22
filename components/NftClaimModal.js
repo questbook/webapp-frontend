@@ -7,6 +7,7 @@ import axios from '../lib/axios';
 import { useAppContext } from '../context/state';
 import tracks from '../public/data/tracks.json';
 import { sendAmplitudeData } from '../lib/amplitude';
+import protocolConstants from '../constants/protocolConstants.json';
 
 function NftClaimModal({
   showNftClaimModal,
@@ -139,22 +140,22 @@ function NftClaimModal({
                 <div className="w-full sm:w-10/12">
                   <p className="font-Inter font-normal text-sm leading-6 mb-4">
                     Enter your{' '}
-                    <span className="font-Inter font-bold text-sm">
+                    {/* <span className="font-Inter font-bold text-sm">
                       Ethereum
-                    </span>{' '}
+                    </span>{' '} */}
                     wallet address, tweet to our official handle @questbook and
                     we will airdrop the NFT to your wallet.
                   </p>
                   <div className="border rounded px-2 py-4">
                     <p className="font-Inter font-bold text-sm text-left mb-2">
-                      Step 1: Enter your Ethereum wallet address
+                      Step 1: Enter your {track} wallet address
                     </p>
                     <input
                       ref={addressInputRef}
                       onChange={(e) => setAddress(e.target.value)}
                       value={address}
                       type="text"
-                      placeholder="0x71C7656EC7ab88b098defB751B7401B5f6d8976F"
+                      placeholder={protocolConstants[track]?.addressPlaceholder}
                       className="form-input px-4 md:px-8 py-3 text-left border-[#ABB2B9] font-Inter font-normal text-sm rounded w-full"
                     />
                   </div>
