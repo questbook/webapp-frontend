@@ -63,7 +63,7 @@ function NftClaimModal({
           setAddress('');
           setLearning('');
           sendAmplitudeData('NFT_claimed', {
-            address: res?.data?.resp?.events[0]?.args[1],
+            address: address,
             track: track,
             quest: currentQuestName,
           });
