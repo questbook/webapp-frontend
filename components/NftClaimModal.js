@@ -54,6 +54,7 @@ function NftClaimModal({
         if (res) {
           console.log(res);
           setMinting(false);
+          setShowError(false);
           setShowNftClaimModal(false);
           setShowWaitingModal(false);
           setMintingSuccess(true);

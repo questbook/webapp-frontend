@@ -20,12 +20,7 @@ function SuccessModal() {
 
   useEffect(() => {
     if (track === 'polygon')
-      setNftLink(
-        `https://opensea.io/assets/matic/${transactionDetails?.to}/${parseInt(
-          transactionDetails?.events[0]?.args[2]?.hex,
-          16
-        )}`
-      );
+      setNftLink(`https://polygonscan.com/tx/${transactionDetails?.hash}`);
     else if (track === 'NEAR')
       setNftLink(
         `https://explorer.near.org/transactions/${transactionDetails?.id}`
