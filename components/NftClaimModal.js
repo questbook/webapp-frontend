@@ -42,7 +42,7 @@ function NftClaimModal({
       try {
         setMinting(true);
         setShowWaitingModal(true);
-        setShowNftClaimModal(false);
+        // setShowNftClaimModal(false);
         const tweetId = tweetUrl.split('/').pop();
         const res = await axios.post(`/mint/${track.toLowerCase()}`, {
           quest: currentQuestName,
@@ -69,14 +69,14 @@ function NftClaimModal({
           });
         } else {
           setMinting(false);
-          setShowNftClaimModal(true);
+          // setShowNftClaimModal(true);
           setShowWaitingModal(false);
           setShowError(true);
         }
       } catch (error) {
         console.log(error);
         setMinting(false);
-        setShowNftClaimModal(true);
+        // setShowNftClaimModal(true);
         setShowWaitingModal(false);
         setShowError(true);
       }
