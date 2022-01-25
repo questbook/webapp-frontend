@@ -28,6 +28,7 @@ function NftClaimModal({
   const [minting, setMinting] = useState(false);
   const [learning, setLearning] = useState('');
   const [tweetText, setTweetText] = useState('');
+  const [showError, setShowError] = useState(false);
   const track = tracks[currentTrackNameKey]?.protocol;
   const router = useRouter();
 
@@ -42,12 +43,13 @@ function NftClaimModal({
         setMinting(true);
         setShowWaitingModal(true);
         setShowNftClaimModal(false);
+        const tweetId = tweetUrl.split('/').pop();
         const res = await axios.post(`/mint/${track.toLowerCase()}`, {
           quest: currentQuestName,
           track: track,
           questDesc: currentQuestDesc,
           address,
-          tweetUrl,
+          tweetId,
         });
         if (res) {
           console.log(res);
@@ -66,14 +68,16 @@ function NftClaimModal({
           });
         } else {
           setMinting(false);
-          setShowNftClaimModal(false);
+          setShowNftClaimModal(true);
           setShowWaitingModal(false);
+          setShowError(true);
         }
       } catch (error) {
         console.log(error);
         setMinting(false);
-        setShowNftClaimModal(false);
+        setShowNftClaimModal(true);
         setShowWaitingModal(false);
+        setShowError(true);
       }
     }
   };
@@ -126,6 +130,32 @@ function NftClaimModal({
                 onClick={() => setShowNftClaimModal(false)}
               />
               <div className="flex flex-col items-center bg-white px-4 py-6  sm:p-6 sm:pb-4 gap-y-6">
+                <div
+                  className={`${
+                    showError ? '' : 'hidden'
+                  } bg-red-100 border w-full sm:w-10/12 mt-8 border-red-400 text-red-700 px-4 py-3 rounded relative`}
+                  role="alert"
+                >
+                  <strong className="font-bold font-Inter">Holy smokes!</strong>
+                  <span className="block sm:inline font-Inter">
+                    {' '}
+                    Claiming failed!
+                  </span>
+                  <span
+                    className="absolute top-0 bottom-0 right-0 px-4 py-3 cursor-pointer"
+                    onClick={() => setShowError(false)}
+                  >
+                    <svg
+                      className="fill-current h-6 w-6 text-red-500"
+                      role="button"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                    >
+                      <title>Close</title>
+                      <path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
+                    </svg>
+                  </span>
+                </div>
                 <div className="mx-auto flex-shrink-0 flex items-center justify-center ">
                   <h2 className=" text-5xl font-bold">👏</h2>
                 </div>
