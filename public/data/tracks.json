@@ -119,6 +119,27 @@
     "desc": "Solana is the arguably the second most popular blockchain. The programs in Solana are written in Rust.",
     "quests": [
       {
+        "slug": "building-a-crowdfunding-platform-using-solana",
+        "questName": "Building a crowdfunding platform using solana!",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/building-a-crowdfunding-platform-using-solana/main",
+        "level": "Beginner",
+        "desc": "In this quest we will launch your own crowdfunding platform on Solana blockchain."
+      },
+      {
+        "slug": "deploying-the-program-on-to-solana",
+        "questName": "Deploying the program on to Solana",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/deploying-the-program-on-to-solana/main",
+        "level": "Beginner",
+        "desc": "In this quest we will be deploying our crowdfunding platform on Solana blockchain."
+      },
+      {
+        "slug": "setting-up-campaign-accounts-and-sending-money-on-solana",
+        "questName": "Setting up campaign accounts and sending money on Solana",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/setting-up-campaign-accounts-and-sending-money-on-solana/main",
+        "level": "Beginner",
+        "desc": "In this quest, we’ll create an account for a campaign and send money to the campaign account."
+      },
+      {
         "slug": "create-an-airdrop-program-with-solana-web3.js",
         "questName": "Create an airdrop program with Solana web3.js",
         "github_url": "https://raw.githubusercontent.com/altsam/create_an_airdrop_program/main",
@@ -218,6 +239,13 @@
         "desc": "In this quest, we will learn how to create our own NEAR MainNet and TestNet Wallets."
       },
       {
+        "slug": "near-assemblyscript-intro",
+        "questName": "NEAR AssemblyScript project setup",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/near-assemblyscript-intro/master",
+        "level": "Beginner",
+        "desc": "In this quest, we will learn how to set up an AssemblyScript project."
+      },
+      {
         "slug": "coin-toss-game-near",
         "questName": "Build a Coin-Toss game using NEAR in AssemblyScript",
         "github_url": "https://raw.githubusercontent.com/CreatorOS/coin-toss-game-near/main",
@@ -272,6 +300,13 @@
         "github_url": "https://raw.githubusercontent.com/CreatorOS/Building-a-platform-to-help-people-launch-their-NGOs-on-Near-protocol/main",
         "level": "Beginner",
         "desc": "In this quest, we’ll build a platform where people can come and register their NGOs, in those NGOs anyone can create projects and add cause with fund requirement details."
+      },
+      {
+        "slug": "NEAR-Voting-Rust",
+        "questName": "Writing a voting contract for unlocking transfers",
+        "github_url": "https://raw.githubusercontent.com/CreatorOS/NEAR-Voting-Rust/main",
+        "level": "Beginner",
+        "desc": "In this quest, we’ll write a very simple yet a very popular contract, which is a part of the core-contracts in near protocol. This particular voting contract will be written in the Rust programming language."
       }
     ]
   },
