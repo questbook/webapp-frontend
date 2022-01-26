@@ -168,18 +168,11 @@
         "desc": "In this quest, we will be creating a personal token a.k.a crytocurrency using Solana CLI."
       },
       {
-        "slug": "create_candy_machine_for_minting_nft",
-        "questName": "Create an NFT candy machine",
-        "github_url": "https://raw.githubusercontent.com/vamsisol/create_candy_machine_for_minting_nft/main",
+        "slug": "create_a_candy_machine_minting_nft_and_minting_website_v2",
+        "questName": "Creating your own NFT Minting Machine and Website v2",
+        "github_url": "https://raw.githubusercontent.com/vamsisol/create_a_candy_machine_minting_nft_and_minting_website_v2/main",
         "level": "Beginner",
-        "desc": "In this Quest, we'll be building our own Candy Machine which will be used to mint NFTs on the Solana Network without paying the minting price."
-      },
-      {
-        "slug": "create_nft_minting_website",
-        "questName": "Create your Pokemon NFT minting website",
-        "github_url": "https://raw.githubusercontent.com/vamsisol/create_nft_minting_website/main",
-        "level": "Beginner",
-        "desc": "In this Quest, we'll be building our own Website and use a Candy Machine which will be containing our NFT assets."
+        "desc": "In this Quest, we'll be building our own Candy Machine which will be used to mint NFTs on the Solana Network without paying the minting price for each mint."
       },
       {
         "slug": "create_crypto_with_js",
