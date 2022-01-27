@@ -205,6 +205,14 @@ export default function Quest({
 
 export async function getServerSideProps(context) {
   let tracks = await fetch('http://localhost:3000/api/data');
+  if (!tracks) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false,
+      },
+    };
+  }
   tracks = await tracks.json();
   const { questNameSlug } = context.params;
   let res, quest, trackNameKey;
