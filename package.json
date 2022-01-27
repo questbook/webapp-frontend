@@ -1,11 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "dev": "env-cmd -f env/.env.development next dev",
-    "build": "env-cmd -f env/.env.production next build",
-    "start": "env-cmd -f env/.env.production next start",
-    "build:beta": "env-cmd -f env/.env.beta next build",
-    "start:beta": "env-cmd -f env/.env.beta next start",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "generate-sitemap": "node sitemap-generator.js"
   },
   "dependencies": {
@@ -17,7 +15,6 @@
     "amplitude-js": "^8.14.1",
     "axios": "^0.24.0",
     "bn.js": "^5.2.0",
-    "env-cmd": "^10.1.0",
     "github-markdown-css": "^5.1.0",
     "next": "latest",
     "react": "^17.0.2",
