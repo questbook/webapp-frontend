@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import Header from '../../components/Header';
 import TrackListHero from '../../components/TrackListHero';
 import Footer from '../../components/Footer';
-import tracks from '../../public/data/tracks.json';
 import CourseGrid from '../../components/CourseGrid';
 import { useEffect } from 'react';
 import { useAppContext } from '../../context/state';
@@ -39,7 +38,16 @@ export default function TrackList({ trackList }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
+  let tracks = await fetch('http://localhost:3000/api/data');
+  if (!tracks) {
+    return {
+      props: {
+        notFound: true,
+      },
+    };
+  }
+  tracks = await tracks.json();
   const trackList = Object.entries(tracks).map(
     ([trackNameKey, { trackName, cardThumbnail }]) => ({
       trackNameKey,

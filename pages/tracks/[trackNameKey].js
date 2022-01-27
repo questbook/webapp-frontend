@@ -60,6 +60,13 @@ export default function Track({ track, trackNameKey }) {
 
 export async function getServerSideProps({ params }) {
   let tracks = await fetch('http://localhost:3000/api/data');
+  if (!tracks) {
+    return {
+      props: {
+        notFound: true,
+      },
+    };
+  }
   tracks = await tracks.json();
   const { trackNameKey } = params;
 
