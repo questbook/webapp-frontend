@@ -19,7 +19,7 @@ function SuccessModal() {
   }, [currentTrackNameKey]);
 
   useEffect(() => {
-    if (track === 'Polygon')
+    if (['Polygon', 'Ethereum'].includes(track)) 
       setNftLink(`https://polygonscan.com/tx/${transactionDetails?.hash}`);
     else if (track === 'NEAR')
       setNftLink(
