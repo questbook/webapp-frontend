@@ -102,7 +102,7 @@ export default function Quest({
       subquestTitlesMd.unshift('## Introduction');
       subQuestContentMd.unshift(questDetailsMd.join('\n'));
       console.log(trackNameKey);
-      if (['build-on-polygon', 'build-on-near'].includes(trackNameKey))
+      if (['build-on-polygon', 'build-on-near', 'build-on-ethereum'].includes(trackNameKey))
         subquestTitlesMd.push('## Claim your NFT');
       setquestTitle(questTitleMd[0]);
       setquestDetails(questDetailsMd.join('\n'));
@@ -159,10 +159,10 @@ export default function Quest({
           <p
             className={`${
               currentSubQuest === subquestTitles.length - 1 &&
-              ['build-on-polygon', 'build-on-near'].includes(
+              ['build-on-polygon', 'build-on-near', 'build-on-ethereum'].includes(
                 currentTrackNameKey
               )
-                ? // currentTrackNameKey === 'build-on-polygon'
+                ? 
                   ''
                 : 'hidden'
             } font-Inter font-bold leading-7 text-base text-black pb-10 `}
