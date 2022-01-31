@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ChevronRightIcon, XIcon, ArrowLeftIcon } from "@heroicons/react/solid";
-import { useAppContext } from "../context/state";
+import { useAppContext } from "context/state";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";

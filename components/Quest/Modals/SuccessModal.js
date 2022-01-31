@@ -1,25 +1,24 @@
 import Image from 'next/image';
 import { Fragment, useEffect, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import { useAppContext } from '../context/state';
-import tracks from '../public/data/tracks.json';
+import { useAppContext } from 'context/state';
 
 function SuccessModal() {
   const {
     mintingSuccess,
     setMintingSuccess,
     transactionDetails,
-    currentTrackNameKey,
+    currentProtocol,
   } = useAppContext();
   const [track, setTrack] = useState('');
   const [nftLink, setNftLink] = useState('');
 
   useEffect(() => {
-    setTrack(tracks[currentTrackNameKey]?.protocol);
-  }, [currentTrackNameKey]);
+    setTrack(currentProtocol);
+  }, [currentProtocol]);
 
   useEffect(() => {
-    if (['Polygon', 'Ethereum'].includes(track)) 
+    if (['Polygon', 'Ethereum'].includes(track))
       setNftLink(`https://polygonscan.com/tx/${transactionDetails?.hash}`);
     else if (track === 'NEAR')
       setNftLink(
@@ -71,6 +70,7 @@ function SuccessModal() {
               <div className="flex p-6 justify-center flex-col items-center">
                 <div className="relative w-16 h-16 ">
                   <Image
+                    alt="alt"
                     src="/images/check.png"
                     layout="fill"
                     objectFit="cover"
@@ -88,6 +88,7 @@ function SuccessModal() {
                       className="font-Inter font-bold text-base cursor-pointer  text-[#7A64F6]"
                       href={nftLink}
                       target="_blank"
+                      rel="noreferrer"
                     >
                       Check out NFT
                     </a>

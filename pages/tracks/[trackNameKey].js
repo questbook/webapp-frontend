@@ -1,12 +1,11 @@
 import { useEffect } from 'react';
 import Head from 'next/head';
-import Footer from '../../components/Footer';
-import Header from '../../components/Header';
-import TrackHero from '../../components/TrackHero';
-import Quests from '../../components/Quests';
-import TrackHeroInfoVertical from '../../components/TrackHeroInfoVertical';
-// import tracks from "../../public/data/tracks.json";
-import { useAppContext } from '../../context/state';
+import Footer from 'components/Common/Footer';
+import Header from 'components/Common/Header';
+import TrackHero from 'components/Track/TrackHero';
+import Quests from 'components/Track/Quests';
+import TrackHeroInfoVertical from 'components/Track/TrackHeroInfoVertical';
+import { useAppContext } from 'context/state';
 import { useRouter } from 'next/router';
 
 export default function Track({ track, trackNameKey }) {
@@ -15,16 +14,26 @@ export default function Track({ track, trackNameKey }) {
     setQuests,
     setcurrentTrackDesc,
     setcurrentTrackNameKey,
+    setcurrentProtocol,
     setcurrentTrackName,
     currentTrackName,
   } = useAppContext();
   useEffect(() => {
-    const { quests, trackName, desc } = track;
+    const { quests, trackName, desc, protocol } = track;
     setQuests(quests);
     setcurrentTrackNameKey(trackNameKey);
+    setcurrentProtocol(protocol);
     setcurrentTrackName(trackName);
     setcurrentTrackDesc(desc);
-  }, [track, trackNameKey]);
+  }, [
+    setQuests,
+    setcurrentProtocol,
+    setcurrentTrackDesc,
+    setcurrentTrackName,
+    setcurrentTrackNameKey,
+    track,
+    trackNameKey,
+  ]);
 
   return (
     <div className="min-h-screen flex flex-col">

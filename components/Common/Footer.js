@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { sendAmplitudeData } from '../lib/amplitude';
+import { sendAmplitudeData } from 'lib/amplitude';
 function Footer({ cname }) {
   return (
     <footer
@@ -9,6 +9,7 @@ function Footer({ cname }) {
         <div className="basis-1/3 lg:basis-1/4 pt-3 lg:pt-6 px-0 xl:px-16 ">
           <div className="flex flex-row justify-center lg:justify-start  mb-5">
             <Image
+              alt="alt"
               src={'/images/qb_logo_white.svg'}
               width={'36.77px'}
               height={'34.45px'}
@@ -25,26 +26,62 @@ function Footer({ cname }) {
               <a
                 href="https://www.facebook.com/Questbookapp-100777945629014/"
                 target="_blank"
+                rel="noreferrer"
               >
-                <Image src={'/images/facebook.svg'} width={20} height={20} />
+                <Image
+                  alt="alt"
+                  src={'/images/facebook.svg'}
+                  width={20}
+                  height={20}
+                />
               </a>
-              <a href="https://www.twitter.com/questbookapp" target="_blank">
-                <Image src={'/images/twitter.svg'} width={20} height={20} />
+              <a
+                href="https://www.twitter.com/questbookapp"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image
+                  alt="alt"
+                  src={'/images/twitter.svg'}
+                  width={20}
+                  height={20}
+                />
               </a>
               <a
                 href="https://www.linkedin.com/company/questbookapp"
                 target="_blank"
+                rel="noreferrer"
               >
-                <Image src={'/images/linkedin.svg'} width={20} height={20} />
+                <Image
+                  alt="alt"
+                  src={'/images/linkedin.svg'}
+                  width={20}
+                  height={20}
+                />
               </a>
               <a
                 href="https://www.youtube.com/channel/UCoz9PgPqhvXwv6J38RmpZeg"
                 target="_blank"
+                rel="noreferrer"
               >
-                <Image src={'/images/youtube.svg'} width={20} height={20} />
+                <Image
+                  alt="alt"
+                  src={'/images/youtube.svg'}
+                  width={20}
+                  height={20}
+                />
               </a>
-              <a href="https://www.instagram.com/questbookapp" target="_blank">
-                <Image src={'/images/instagram.svg'} width={20} height={20} />
+              <a
+                href="https://www.instagram.com/questbookapp"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image
+                  alt="alt"
+                  src={'/images/instagram.svg'}
+                  width={20}
+                  height={20}
+                />
               </a>
             </div>
           </div>
@@ -55,6 +92,7 @@ function Footer({ cname }) {
               onClick={() => sendAmplitudeData('discord_button_footer_clicked')}
               href="https://discord.gg/tWg7Mb7KM7"
               target="_blank"
+              rel="noreferrer"
               className="font-Inter w-fit font-normal opacity-70 text-sm lg:text-base"
             >
               Discord
@@ -70,7 +108,7 @@ function Footer({ cname }) {
               Palto Alto, CA 94303
             </p>
             <p className="font-Inter font-normal opacity-70 text-xs lg:text-base">
-              founders@questbook.app
+              support@questbook.app
             </p>
           </div>
         </div>
@@ -83,10 +121,17 @@ function Footer({ cname }) {
               onClick={() => sendAmplitudeData('ios_button_footer_clicked')}
               href="https://apps.apple.com/in/app/questbook-learn-together/id1565531521"
               target="_blank"
+              rel="noreferrer"
               className="mr-6 flex flex-row justify-around w-[132px] h-[46px]  items-center py-2 px-2 text-white rounded bg-black"
             >
-              <Image src={'/images/apple_logo.svg'} width={20} height={20} />
               <Image
+                alt="alt"
+                src={'/images/apple_logo.svg'}
+                width={20}
+                height={20}
+              />
+              <Image
+                alt="alt"
                 src={'/images/app_store_text.svg'}
                 width={'68px'}
                 height={'24px'}
@@ -96,15 +141,18 @@ function Footer({ cname }) {
               onClick={() => sendAmplitudeData('android_button_footer_clicked')}
               href="https://play.google.com/store/apps/details?id=app.questbook&hl=en_IN&gl=US"
               target="_blank"
+              rel="noreferrer"
               className="flex flex-row justify-around w-[132px] h-[46px]  items-center py-2 px-2 text-white rounded bg-black"
             >
               <Image
+                alt="alt"
                 className="w-12"
                 src={'/images/play_store_logo.svg'}
                 width={20}
                 height={20}
               />
               <Image
+                alt="alt"
                 src={'/images/play_store_text.svg'}
                 width={'68px'}
                 height={'24px'}

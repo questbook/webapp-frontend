@@ -1,14 +1,14 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 import {
   ArrowCircleLeftIcon,
   ChevronDownIcon,
   ChevronRightIcon,
-} from "@heroicons/react/outline";
-import { useAppContext } from "../context/state";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import rehypeRaw from "rehype-raw";
+} from '@heroicons/react/outline';
+import { useAppContext } from 'context/state';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 
 function QuestHero() {
   const {
@@ -28,20 +28,20 @@ function QuestHero() {
         <div
           className={` container px-8 mx-auto h-full relative  flex flex-row space-x-2 lg:space-x-0 transition-[flex-direction] duration-300 `}
         >
-          <Link href={`/tracks/${currentTrackNameKey}`}>
+          <Link passHref href={`/tracks/${currentTrackNameKey}`}>
             <ArrowCircleLeftIcon className="lg:hidden w-7 h-7 text-white" />
           </Link>
           <div className={` flex flex-col space-y-1`}>
             <div
               className={` hidden lg:flex mb-8 lg:flex-row lg:items-center lg:space-x-1 `}
             >
-              <Link href="/tracks">
+              <Link passHref href="/tracks">
                 <a className="font-Inter text-base font-normal text-white opacity-60">
                   All tracks
                 </a>
               </Link>
               <ChevronRightIcon className="text-white opacity-75  w-4 h-[18px]" />
-              <Link href={`/tracks/${currentTrackNameKey}`}>
+              <Link passHref href={`/tracks/${currentTrackNameKey}`}>
                 <a className="font-Inter text-base font-normal text-white opacity-60">
                   {currentTrackName}
                 </a>
@@ -69,6 +69,7 @@ function QuestHero() {
           >
             <div className={` relative  lg:w-56  lg:h-60 w-12 h-[50px]  `}>
               <Image
+                alt="alt"
                 src={`/images/${currentTrackNameKey}.png`}
                 layout="fill"
                 className=" shadow-[4px_38px_43px_rgba(0,0,0,0.2)]"

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { MenuIcon, XIcon } from '@heroicons/react/solid';
-import { sendAmplitudeData } from '../lib/amplitude';
+import { sendAmplitudeData } from 'lib/amplitude';
 
 function Header() {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -20,7 +20,7 @@ function Header() {
           : 'flex-col items-start  space-y-8 mb-8 '
       } flex    `}
     >
-      <Link href="/tracks">
+      <Link passHref href="/tracks">
         <li className="font-Inter cursor-pointer text-xl whitespace-nowrap">
           <a
             onClick={() =>
@@ -36,6 +36,7 @@ function Header() {
           onClick={() => sendAmplitudeData('discord_button_header_clicked')}
           href="https://discord.gg/tWg7Mb7KM7"
           target="_blank"
+          rel="noreferrer"
         >
           Discord
         </a>
@@ -55,23 +56,41 @@ function Header() {
         <a
           href="https://apps.apple.com/in/app/questbook-learn-together/id1565531521"
           target="_blank"
+          rel="noreferrer"
           className="flex flex-row w-28  items-center py-2 px-2 text-white rounded bg-gradient-to-r from-melrose-g to-medium-purple-g"
         >
-          <Image src={'/images/apple_logo.svg'} width={20} height={20} />
-          <Image src={'/images/app_store_text.svg'} width={80} height={20} />
+          <Image
+            alt="alt"
+            src={'/images/apple_logo.svg'}
+            width={20}
+            height={20}
+          />
+          <Image
+            alt="alt"
+            src={'/images/app_store_text.svg'}
+            width={80}
+            height={20}
+          />
         </a>
         <a
           href="https://play.google.com/store/apps/details?id=app.questbook&hl=en_IN&gl=US"
           target="_blank"
+          rel="noreferrer"
           className="flex flex-row w-28  items-center py-2 px-2 text-white rounded bg-gradient-to-r from-melrose-g to-medium-purple-g"
         >
           <Image
+            alt="alt"
             className="w-12"
             src={'/images/play_store_logo.svg'}
             width={20}
             height={20}
           />
-          <Image src={'/images/play_store_text.svg'} width={80} height={20} />
+          <Image
+            alt="alt"
+            src={'/images/play_store_text.svg'}
+            width={80}
+            height={20}
+          />
         </a>
       </div>
     </>
@@ -81,9 +100,10 @@ function Header() {
       <header className={`sticky top-0 bg-white z-20`}>
         <div className="container mx-auto flex flex-row items-center z-10 py-2 px-8  justify-between">
           <div className="flex flex-row z-30 items-center w-1/2 lg:w-1/3">
-            <Link href="/">
+            <Link passHref href="/">
               <div className="flex flex-row cursor-pointer items-center">
                 <Image
+                  alt="alt"
                   src={'/images/qb_menu_logo.svg'}
                   width={30}
                   height={20}

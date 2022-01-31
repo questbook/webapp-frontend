@@ -1,5 +1,5 @@
-import { useEffect, useState, useRef } from "react";
-import Image from "next/image";
+import { useEffect, useState, useRef } from 'react';
+import Image from 'next/image';
 
 function MobileSection() {
   const mobileSectionRef = useRef();
@@ -17,9 +17,9 @@ function MobileSection() {
 
     handleScroll();
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -41,10 +41,11 @@ function MobileSection() {
       >
         <div className="  mx-auto w-[226px]   h-[458.55px]  relative">
           <Image
+            alt="alt"
             src={`${
               scrollY >= offsetBottom && windowWidth >= 1024
-                ? "/images/i12pb_exp.png"
-                : "/images/i12p_exp.png"
+                ? '/images/i12pb_exp.png'
+                : '/images/i12p_exp.png'
             }`}
             layout="fill"
             objectFit="scale-down"
@@ -56,30 +57,40 @@ function MobileSection() {
         <a
           href="https://apps.apple.com/in/app/questbook-learn-together/id1565531521"
           target="_blank"
+          rel="noreferrer"
           className="mr-6 flex flex-row justify-around w-[132px] h-[46px]  items-center py-2 px-2 text-white rounded bg-[#3F3E3E]"
         >
-          <Image src={"/images/apple_logo.svg"} width={20} height={20} />
           <Image
-            src={"/images/app_store_text.svg"}
-            width={"68px"}
-            height={"24px"}
+            alt="alt"
+            src={'/images/apple_logo.svg'}
+            width={20}
+            height={20}
+          />
+          <Image
+            alt="alt"
+            src={'/images/app_store_text.svg'}
+            width={'68px'}
+            height={'24px'}
           />
         </a>
         <a
           href="https://play.google.com/store/apps/details?id=app.questbook&hl=en_IN&gl=US"
           target="_blank"
+          rel="noreferrer"
           className="flex flex-row justify-around w-[132px] h-[46px]  items-center py-2 px-2 text-white rounded bg-[#3F3E3E]"
         >
           <Image
+            alt="alt"
             className="w-12"
-            src={"/images/play_store_logo.svg"}
+            src={'/images/play_store_logo.svg'}
             width={20}
             height={20}
           />
           <Image
-            src={"/images/play_store_text.svg"}
-            width={"68px"}
-            height={"24px"}
+            alt="alt"
+            src={'/images/play_store_text.svg'}
+            width={'68px'}
+            height={'24px'}
           />
         </a>
       </div>

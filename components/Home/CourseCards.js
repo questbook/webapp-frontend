@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import CourseCard from './CourseCard';
+import CourseCard from '../Common/CourseCard';
 import { ArrowRightIcon } from '@heroicons/react/solid';
-import { sendAmplitudeData } from '../lib/amplitude';
+import { sendAmplitudeData } from 'lib/amplitude';
 
 function CourseCards() {
   return (
@@ -9,7 +9,7 @@ function CourseCards() {
       className={` container lg:w-full left-0 right-0 mx-auto lg:absolute -bottom-[40%] lg:-bottom-[30%] xl:-bottom-[40%]   pb-8 px-6 lg:px-16 xl:px-8 xl:-left-1/2 xl:-right-1/2 z-10  xl:mx-auto `}
     >
       <div className="py-3  ">
-        <Link href="/tracks">
+        <Link passHref href="/tracks">
           <h3
             onClick={() =>
               sendAmplitudeData('explore_all_tracks_button_hero_clicked')
