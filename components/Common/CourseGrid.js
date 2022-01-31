@@ -1,4 +1,4 @@
-import { useAppContext } from "../context/state";
+import { useAppContext } from "context/state";
 import CourseCard from "./CourseCard";
 
 function CourseGrid() {

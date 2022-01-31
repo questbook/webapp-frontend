@@ -1,11 +1,11 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 import {
   ArrowCircleLeftIcon,
   ChevronRightIcon,
-} from "@heroicons/react/outline";
-import TrackHeroInfo from "./TrackHeroInfo";
-import { useAppContext } from "../context/state";
+} from '@heroicons/react/outline';
+import TrackHeroInfo from './TrackHeroInfo';
+import { useAppContext } from 'context/state';
 
 function TrackHero() {
   const { currentTrackName, currentTrackNameKey, currentTrackDesc } =
@@ -22,7 +22,7 @@ function TrackHero() {
           <div
             className={` hidden lg:flex lg:flex-row lg:items-center lg:space-x-1`}
           >
-            <Link href="/tracks">
+            <Link passHref href="/tracks">
               <a className="font-Inter text-base font-normal text-white opacity-60">
                 All tracks
               </a>
@@ -32,7 +32,7 @@ function TrackHero() {
               {currentTrackName}
             </span>
           </div>
-          <Link href="/tracks">
+          <Link passHref href="/tracks">
             <ArrowCircleLeftIcon className="lg:hidden w-7 h-7 text-white" />
           </Link>
           <h4
@@ -55,6 +55,7 @@ function TrackHero() {
           >
             <div className={` relative  w-24 lg:w-56  h-24 lg:h-60 `}>
               <Image
+                alt="alt"
                 src={`/images/${currentTrackNameKey}.png`}
                 layout="fill"
                 className=" shadow-[4px_38px_43px_rgba(0,0,0,0.2)]"

@@ -12,6 +12,7 @@ export function AppWrapper({ children }) {
 
   const [currentTrackNameKey, setcurrentTrackNameKey] = useState('');
   const [currentTrackName, setcurrentTrackName] = useState('');
+  const [currentProtocol, setcurrentProtocol] = useState('');
   const [currentTrackDesc, setcurrentTrackDesc] = useState('');
   const [currentQuestName, setcurrentQuestName] = useState('');
   const [currentQuestLevel, setcurrentQuestLevel] = useState('');
@@ -51,6 +52,8 @@ export function AppWrapper({ children }) {
         setcurrentTrackNameKey,
         currentTrackName,
         setcurrentTrackName,
+        currentProtocol,
+        setcurrentProtocol, 
         currentTrackDesc,
         setcurrentTrackDesc,
         currentQuestName,

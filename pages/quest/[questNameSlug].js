@@ -1,26 +1,26 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import Footer from '../../components/Footer';
-import Header from '../../components/Header';
-import QuestHero from '../../components/QuestHero';
-import SubquestContent from '../../components/SubquestContent';
-import SubquestMenu from '../../components/SubquestMenu';
-import SubquestNav from '../../components/SubquestNav';
+import Footer from 'components/Common/Footer';
+import Header from 'components/Common/Header';
+import QuestHero from 'components/Quest/QuestHero';
+import SubquestContent from 'components/Quest/SubquestContent';
+import SubquestMenu from 'components/Quest/SubquestMenu';
+import SubquestNav from 'components/Quest/SubquestNav';
 import { ArrowRightIcon } from '@heroicons/react/solid';
-import { useAppContext } from '../../context/state';
+import { useAppContext } from 'context/state';
 import axios from 'axios';
-import NftClaimModal from '../../components/NftClaimModal';
-import WaitingModal from '../../components/WaitingModal';
-import SuccessModal from '../../components/SuccessModal';
-import { sendAmplitudeData } from '../../lib/amplitude';
-// import tracks from "../../public/data/tracks.json";
+import NftClaimModal from 'components/Quest/Modals/NftClaimModal';
+import WaitingModal from 'components/Quest/Modals/WaitingModal';
+import SuccessModal from 'components/Quest/Modals/SuccessModal';
+import { sendAmplitudeData } from 'lib/amplitude';
 export default function Quest({
   data,
   github_url,
   questName,
   trackNameKey,
   trackName,
+  protocol,
   level,
   desc,
 }) {
@@ -47,6 +47,7 @@ export default function Quest({
     setCurrentSubQuest,
     currentSubQuest,
     currentTrackNameKey,
+    setcurrentProtocol,
   } = useAppContext();
 
   const { showMenu, setShowMenu } = useAppContext();
@@ -56,16 +57,33 @@ export default function Quest({
     setgithubRawUrl(github_url);
     setcurrentTrackNameKey(trackNameKey);
     setcurrentTrackName(trackName);
+    setcurrentProtocol(protocol);
     setcurrentQuestLevel(level);
     setcurrentQuestDesc(desc);
     setCurrentSubQuest(0);
-  }, [github_url, questName, trackNameKey, trackName, level, desc]);
+  }, [
+    github_url,
+    questName,
+    trackNameKey,
+    trackName,
+    protocol,
+    level,
+    desc,
+    setcurrentQuestName,
+    setgithubRawUrl,
+    setcurrentTrackNameKey,
+    setcurrentTrackName,
+    setcurrentProtocol,
+    setcurrentQuestLevel,
+    setcurrentQuestDesc,
+    setCurrentSubQuest,
+  ]);
 
   useEffect(() => {
     if (window.outerWidth >= 1024) {
       setShowMenu(true);
     }
-  }, []);
+  }, [setShowMenu]);
 
   useEffect(() => {
     if (github_url && data) {
@@ -102,14 +120,27 @@ export default function Quest({
       subquestTitlesMd.unshift('## Introduction');
       subQuestContentMd.unshift(questDetailsMd.join('\n'));
       console.log(trackNameKey);
-      if (['build-on-polygon', 'build-on-near', 'build-on-ethereum'].includes(trackNameKey))
+      if (
+        ['build-on-polygon', 'build-on-near', 'build-on-ethereum'].includes(
+          trackNameKey
+        )
+      )
         subquestTitlesMd.push('## Claim your NFT');
       setquestTitle(questTitleMd[0]);
       setquestDetails(questDetailsMd.join('\n'));
       setsubquestTitles(subquestTitlesMd);
       setsubQuestContent(subQuestContentMd);
     }
-  }, [data]);
+  }, [
+    data,
+    github_url,
+    setgithubRepoUrl,
+    setquestDetails,
+    setquestTitle,
+    setsubQuestContent,
+    setsubquestTitles,
+    trackNameKey,
+  ]);
   return (
     <div className="min-h-screen flex flex-col">
       <Head>
@@ -159,11 +190,12 @@ export default function Quest({
           <p
             className={`${
               currentSubQuest === subquestTitles.length - 1 &&
-              ['build-on-polygon', 'build-on-near', 'build-on-ethereum'].includes(
-                currentTrackNameKey
-              )
-                ? 
-                  ''
+              [
+                'build-on-polygon',
+                'build-on-near',
+                'build-on-ethereum',
+              ].includes(currentTrackNameKey)
+                ? ''
                 : 'hidden'
             } font-Inter font-bold leading-7 text-base text-black pb-10 `}
           >
@@ -192,6 +224,7 @@ export default function Quest({
             href={githubRepoUrl}
             className="text-[#8BE3FF] underline"
             target="_blank"
+            rel="noreferrer"
           >
             <span>fork this repo</span>
           </a>{' '}
@@ -225,7 +258,7 @@ export async function getServerSideProps(context) {
     }
   });
   const { questName, github_url, level, desc } = quest;
-  const { trackName } = tracks[trackNameKey];
+  const { trackName, protocol } = tracks[trackNameKey];
   const baseRepoUrl = github_url;
   if (!github_url) {
     return {
@@ -260,6 +293,7 @@ export async function getServerSideProps(context) {
       questName,
       trackNameKey,
       trackName,
+      protocol,
       level,
       desc,
     },

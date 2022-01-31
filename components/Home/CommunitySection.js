@@ -9,7 +9,7 @@ function CommunitySection() {
           like you!
         </h2>
         <p className="font-Inter font-normal text-xl  text-white ">
-          Don't believe us? See what they are saying about Questbook.
+          Don&apos;t believe us? See what they are saying about Questbook.
         </p>
         <div className="pt-16">
           <div className="shoutout-embed" data-wall="questbook-webapp"></div>

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 function TrackListHero() {
   return (
@@ -17,6 +17,7 @@ function TrackListHero() {
           >
             <div className={` relative  w-24 lg:w-36  h-24 lg:h-36 `}>
               <Image
+                alt="alt"
                 src={`/images/all_tracks.png`}
                 layout="fill"
                 className=" shadow-[4px_38px_43px_rgba(0,0,0,0.2)]"

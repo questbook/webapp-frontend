@@ -3,11 +3,10 @@ import Image from 'next/image';
 import { Fragment, useRef, useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { Dialog, Transition } from '@headlessui/react';
-import axios from '../lib/axios';
-import { useAppContext } from '../context/state';
-import tracks from '../public/data/tracks.json';
-import { sendAmplitudeData } from '../lib/amplitude';
-import protocolConstants from '../constants/protocolConstants.json';
+import axios from 'lib/axios';
+import { useAppContext } from 'context/state';
+import { sendAmplitudeData } from 'lib/amplitude';
+import protocolConstants from 'constants/protocolConstants.json';
 
 function NftClaimModal({
   showNftClaimModal,
@@ -16,9 +15,9 @@ function NftClaimModal({
 }) {
   const {
     setMintingSuccess,
-    currentTrackNameKey,
     currentQuestName,
     currentQuestDesc,
+    currentProtocol,
     setTransactionDetails,
   } = useAppContext();
   const addressInputRef = useRef(null);
@@ -29,14 +28,13 @@ function NftClaimModal({
   const [learning, setLearning] = useState('');
   const [tweetText, setTweetText] = useState('');
   const [showError, setShowError] = useState(false);
-  const track = tracks[currentTrackNameKey]?.protocol;
   const router = useRouter();
 
   useEffect(() => {
     setTweetText(
       `I learnt "${learning}" at https://openquest.xyz${router.asPath}.\n I'm confirming my address to claim my @questbookapp NFT : ${address}`
     );
-  }, [address, learning]);
+  }, [address, learning, router.asPath]);
   const mintNft = async () => {
     if (tweetUrl !== '' && address !== '') {
       try {
@@ -44,9 +42,9 @@ function NftClaimModal({
         setShowWaitingModal(true);
         // setShowNftClaimModal(false);
         const tweetId = tweetUrl.split('/').pop();
-        const res = await axios.post(`/mint/${track.toLowerCase()}`, {
+        const res = await axios.post(`/mint/${currentProtocol.toLowerCase()}`, {
           quest: currentQuestName,
-          track: track,
+          track: currentProtocol,
           questDesc: currentQuestDesc,
           address,
           tweetId,
@@ -64,7 +62,7 @@ function NftClaimModal({
           setLearning('');
           sendAmplitudeData('NFT_claimed', {
             address: address,
-            track: track,
+            track: currentProtocol,
             quest: currentQuestName,
           });
         } else {
@@ -179,14 +177,16 @@ function NftClaimModal({
                   </p>
                   <div className="border rounded px-2 py-4">
                     <p className="font-Inter font-bold text-sm text-left mb-2">
-                      Step 1: Enter your {track} wallet address
+                      Step 1: Enter your {currentProtocol} wallet address
                     </p>
                     <input
                       ref={addressInputRef}
                       onChange={(e) => setAddress(e.target.value)}
                       value={address}
                       type="text"
-                      placeholder={protocolConstants[track]?.addressPlaceholder}
+                      placeholder={
+                        protocolConstants[currentProtocol]?.addressPlaceholder
+                      }
                       className="form-input px-4 md:px-8 py-3 text-left border-[#ABB2B9] font-Inter font-normal text-sm rounded w-full"
                     />
                   </div>
@@ -227,6 +227,7 @@ function NftClaimModal({
                     className={` bg-[#299DED] group disabled:bg-[#CCCCCC] cursor-pointer disabled:cursor-not-allowed w-full h-9 mx-auto flex items-center justify-center gap-x-2 rounded`}
                   >
                     <Image
+                      alt="alt"
                       src={`${
                         address === '' || learning === ''
                           ? '/images/twitter-grey.svg'
