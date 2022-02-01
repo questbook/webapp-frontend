@@ -46,7 +46,7 @@ function CourseCards() {
         <CourseCard
           text={'Build on'}
           subtext={'Polygon'}
-          imgSrc={'/images/build-on-polygon.png'}
+          imgSrc={'/images/poly.png'}
           dimensions={[99, 90]}
           url={'/tracks/build-on-polygon'}
         />
