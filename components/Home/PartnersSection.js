@@ -23,7 +23,7 @@ function PartnersSection() {
           </div>
         </div>
         <div className="absolute  left-[42%] bottom-[18%]  ">
-          <div className="relative w-[79.32px] lg:w-[214.08px] h-[77px] lg:h-[218px] rotate-[14.81deg]  drop-shadow-[5px_34px_52px_rgba(0,0,0,0.25)]">
+          <div className="relative w-[77px] lg:w-[218px] h-[77px] lg:h-[218px]   drop-shadow-[5px_34px_52px_rgba(0,0,0,0.25)]">
             <Image alt="alt" src="/images/build-on-polygon.png" layout="fill" />
           </div>
         </div>
