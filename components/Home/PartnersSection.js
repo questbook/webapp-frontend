@@ -22,6 +22,11 @@ function PartnersSection() {
             <Image alt="alt" src="/images/solana_p.png" layout="fill" />
           </div>
         </div>
+        <div className="absolute  left-[42%] bottom-[18%]  ">
+          <div className="relative w-[79.32px] lg:w-[214.08px] h-[77px] lg:h-[218px] rotate-[14.81deg]  drop-shadow-[5px_34px_52px_rgba(0,0,0,0.25)]">
+            <Image alt="alt" src="/images/build-on-polygon.png" layout="fill" />
+          </div>
+        </div>
         <div className="absolute right-24 bottom-0 lg:right-64 ">
           <div className="relative w-[71.76px] lg:w-[213.43px] h-[69px] lg:h-[218px]  rotate-[12.7deg]  drop-shadow-[5px_34px_52px_rgba(0,0,0,0.25)]">
             <Image alt="alt" src="/images/ethereum_p.png" layout="fill" />
