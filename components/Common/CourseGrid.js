@@ -8,7 +8,7 @@ function CourseGrid() {
       {trackList.map((track, index) => (
         <CourseCard
           subtext={track.trackName}
-          imgSrc={`/images/${track.cardThumbnail}`}
+          imgSrc={`${process.env.NEXT_PUBLIC_CONTENT_BASE_URL}/assets/images/${track.cardThumbnail}`}
           url={`/tracks/${track.trackNameKey}`}
           key={index}
         />

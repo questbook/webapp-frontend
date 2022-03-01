@@ -53,7 +53,7 @@ function TrackHero() {
           <div
             className={` absolute  -right-7 lg:right-20 -top-7 lg:top-0   lg:-bottom-8 rotate-12 `}
           >
-            <div className={` relative  w-24 lg:w-56  h-24 lg:h-60 `}>
+            <div className={` relative  w-24 lg:w-56  h-24 lg:h-56 `}>
               <Image
                 alt="alt"
                 src={`/images/${currentTrackNameKey}.png`}
